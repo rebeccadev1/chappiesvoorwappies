@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breakfast – Chappies voor Wappies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="index.html" class="site-title">Chappies voor Wappies</a>
+    <div class="site-subtitle">by Rebecca Jekel</div>
+  </div>
+  <nav>
+    <a href="breakfast.html">Breakfast</a>
+    <a href="lunch.html">Lunch</a>
+    <a href="dinner.html">Dinner</a>
+    <a href="dessert.html">Dessert</a>
+  </nav>
+<div id="search-bar">
+  <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
+</div>
+</header>
+
+  <main>
+    <h1>Breakfast Recipes</h1>
+    <div class="card-grid">
+      <div class="recipe-card" onclick="openRecipe('breakfast1')">
+        <img src="images/breakfast1.jpg" alt="Avocado Toast">
+        <h3>Avocado Toast</h3>
+      </div>
+      <!-- Add more breakfast recipes here -->
+    </div>
+
+    <div id="recipe-detail"></div>
+  </main>
+
+<script src="scripts.js"></script>
+<script src="recipes/breakfast/breakfast1.js"></script>
+<!-- Recipe Modal -->
+<div id="recipe-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeRecipe()" aria-label="Close">×</button>
+    <div id="recipe-detail" class="modal-content"></div>
+  </div>
+</div>
+</body>
+</html>
