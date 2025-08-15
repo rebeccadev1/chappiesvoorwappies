@@ -1,0 +1,218 @@
+/* === Chappies voor Wappies — Global Styles (Palette) ===
+Cinereous  #a78682
+White      #fcfcfc
+Rosewood   #6b0f1a
+Bice Blue  #006ba6
+Delft Blue #1d3354
+*/
+:root{
+  --cinereous:#a78682;
+  --white:#fcfcfc;
+  --rosewood:#6b0f1a;
+  --bice:#006ba6;
+  --delft:#1d3354;
+
+  --bg:var(--white);
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --divider: rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* --- Header --- */
+header { margin: 0; padding: 0; }
+
+.header-top {
+  background-color: var(--rosewood);
+  text-align: center;
+  padding: 0.8em 0;
+}
+
+.site-title {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+}
+.site-title:visited,
+.site-title:hover,
+.site-title:active { color:#fff; text-decoration:none; }
+
+.site-subtitle {
+  font-size: 0.9em;
+  color: #fff;
+  margin-top: 0.2em;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background-color: var(--delft);
+  padding: 0.6em;
+  border-bottom: 1px solid var(--divider);
+}
+nav a,
+nav a:visited,
+nav a:active {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: .35em .6em;
+  border-radius: 10px;
+}
+nav a:hover { 
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+}
+
+/* --- Search Bar --- */
+#search-bar {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+#search-input {
+  padding: 0.6em 0.8em;
+  width: 80%;
+  max-width: 420px;
+  font-size: 1em;
+  border: 2px solid var(--bice);
+  border-radius: 10px;
+  outline: none;
+  display: inline-block;
+}
+#search-input:focus { box-shadow: 0 0 0 3px rgba(0,107,166,0.2); }
+
+/* --- Headings --- */
+h1, h2, h3 { color: var(--delft); }
+h1 { text-align: center; }
+
+/* --- Cards --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1em;
+  max-width: 1000px;
+  margin: 0 auto 2em;
+  padding: 0 1em;
+}
+.recipe-card {
+  background: var(--card);
+  padding: 1.5em;
+  border-radius: 12px;
+  border: 1px solid var(--cinereous);
+  box-shadow: 0 2px 16px rgba(29,51,84,0.14);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.recipe-card:hover { transform: scale(1.02); }
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--divider);
+}
+
+/* --- Form elements --- */
+input[type="number"] {
+  width: 70px;
+  margin-left: 0.5em;
+  padding: 0.4em 0.5em;
+  border-radius: 10px;
+  border: 2px solid var(--bice);
+  outline: none;
+}
+input[type="number"]:focus { box-shadow: 0 0 0 3px rgba(0,107,166,0.2); }
+
+/* --- Buttons --- */
+.btn{
+  background: var(--bice);
+  color: #fff;
+  border: 1px solid var(--bice);
+  padding: .5em .9em;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-outline{
+  background: transparent;
+  color: var(--bice);
+  border: 1px solid var(--bice);
+}
+
+/* --- Optional padding for recipe detail content --- */
+#recipe-detail { padding: 0 20px; }
+#recipe-detail h2 { margin-top: 8px; }
+
+/* === Recipe Modal Overlay === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;                 /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.28);  /* soft dark veil */
+  backdrop-filter: blur(6px);    /* blur the page behind */
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  width: 92%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: auto;
+  background: var(--card);
+  border: 1px solid var(--cinereous);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  padding: 16px 18px 20px;
+  animation: modalIn 180ms ease-out;
+}
+@keyframes modalIn {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+.modal-close {
+  position: sticky;  /* stays visible while scrolling */
+  top: 0;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--delft);
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0 8px;
+}
+
+/* Blur + lock scroll when modal is open */
+body.modal-open main { filter: blur(5px); }
+body.modal-open { overflow: hidden; }
+
+/* Lists spacing inside detail */
+.ingredients { margin-top: 1em; }
+.steps { margin-top: 1.5em; }
