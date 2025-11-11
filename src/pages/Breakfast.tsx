@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Home, Minus, Plus, Clock, Leaf } from "lucide-react";
+import { Home, Minus, Plus, Clock, Leaf, Printer, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useFavorites } from "@/hooks/use-favorites";
 
 interface Ingredient {
   name: string;
@@ -110,6 +111,7 @@ const breakfastRecipes: Recipe[] = [
 const Breakfast = () => {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [servings, setServings] = useState(4);
+  const { toggleFavorite, isFavorite } = useFavorites();
 
   const handleOpenRecipe = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
@@ -131,14 +133,30 @@ const Breakfast = () => {
     return Math.round(scaled * 100) / 100;
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
+  const handleFavoriteClick = (e: React.MouseEvent, recipe: Recipe) => {
+    e.stopPropagation();
+    toggleFavorite({
+      id: recipe.id.toString(),
+      title: recipe.title,
+      image: recipe.image,
+      category: 'breakfast'
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-4xl md:text-5xl font-aharoni font-bold" style={{ color: '#904E55' }}>
-              Chappies voor Wappies
-            </h1>
+            <Link to="/">
+              <h1 className="text-4xl md:text-5xl font-aharoni font-bold cursor-pointer hover:opacity-80 transition-opacity" style={{ color: '#904E55' }}>
+                Chappies voor Wappies
+              </h1>
+            </Link>
             <Link to="/">
               <Button variant="ghost" size="icon">
                 <Home className="h-5 w-5" />
@@ -168,9 +186,23 @@ const Breakfast = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="font-aharoni text-xl" style={{ color: '#904E55' }}>
-                  {recipe.title}
-                </CardTitle>
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex-1">
+                    <CardTitle className="font-aharoni text-xl" style={{ color: '#904E55' }}>
+                      {recipe.title}
+                    </CardTitle>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={(e) => handleFavoriteClick(e, recipe)}
+                    className="shrink-0"
+                  >
+                    <Heart
+                      className={`h-5 w-5 ${isFavorite(recipe.id.toString()) ? 'fill-red-500 text-red-500' : ''}`}
+                    />
+                  </Button>
+                </div>
                 <CardDescription>{recipe.description}</CardDescription>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2">
                   <span className="flex items-center gap-1">
@@ -201,9 +233,14 @@ const Breakfast = () => {
           {selectedRecipe && (
             <>
               <DialogHeader>
-                <DialogTitle className="font-aharoni text-3xl" style={{ color: '#904E55' }}>
-                  {selectedRecipe.title}
-                </DialogTitle>
+                <div className="flex items-start justify-between gap-4">
+                  <DialogTitle className="font-aharoni text-3xl" style={{ color: '#904E55' }}>
+                    {selectedRecipe.title}
+                  </DialogTitle>
+                  <Button variant="outline" size="icon" onClick={handlePrint}>
+                    <Printer className="h-4 w-4" />
+                  </Button>
+                </div>
               </DialogHeader>
 
               <div className="space-y-6">

@@ -13,29 +13,25 @@ const categories = [
     title: "Lunch",
     description: "Perfect midday meals to keep you energized",
     path: "/lunch",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
-    disabled: true
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
   },
   {
     title: "Dinner",
     description: "Hearty evening dishes for the whole family",
     path: "/dinner",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
-    disabled: true
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80"
   },
   {
     title: "Dessert",
     description: "Sweet treats to satisfy your cravings",
     path: "/dessert",
-    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80",
-    disabled: true
+    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80"
   },
   {
     title: "Snacks",
     description: "Quick bites for any time of day",
     path: "/snacks",
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=800&q=80",
-    disabled: true
+    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=800&q=80"
   }
 ];
 
@@ -59,7 +55,6 @@ const Index = () => {
             <Link 
               key={category.title} 
               to={category.path}
-              className={category.disabled ? "pointer-events-none opacity-60" : ""}
             >
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="aspect-video overflow-hidden">
@@ -76,11 +71,6 @@ const Index = () => {
                   <CardDescription className="text-base">
                     {category.description}
                   </CardDescription>
-                  {category.disabled && (
-                    <span className="text-xs text-muted-foreground italic">
-                      Coming soon...
-                    </span>
-                  )}
                 </CardHeader>
               </Card>
             </Link>
