@@ -44,7 +44,7 @@ const Index = () => {
             Chappies voor Wappies
           </h1>
           <p className="text-center text-muted-foreground mt-3 text-lg">
-            Your personal recipe collection
+            Rebecca's favoriete Recepten
           </p>
         </div>
       </header>
