@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { ChevronDown, ChevronUp, Home, Minus, Plus, Printer, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "@/hooks/use-favorites";
+import { useRecipes } from "@/hooks/use-recipes";
 
 const recipes = [
   {
@@ -12,7 +13,7 @@ const recipes = [
     title: "Spaghetti Bolognese",
     description: "Classic Italian pasta with rich meat sauce",
     image: "https://images.unsplash.com/photo-1627662235158-e9628c1ce5e3?w=800&q=80",
-    prepTime: "45 min",
+    prepTime: 45,
     isVegan: false,
     isVegetarian: false,
     baseServings: 4,
@@ -40,7 +41,7 @@ const recipes = [
     title: "Roasted Chicken",
     description: "Herb-roasted whole chicken with vegetables",
     image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&q=80",
-    prepTime: "90 min",
+    prepTime: 90,
     isVegan: false,
     isVegetarian: false,
     baseServings: 4,
@@ -67,7 +68,7 @@ const recipes = [
     title: "Vegetable Curry",
     description: "Aromatic vegetable curry with coconut milk",
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
-    prepTime: "40 min",
+    prepTime: 40,
     isVegan: true,
     isVegetarian: true,
     baseServings: 4,
@@ -95,6 +96,10 @@ const Dinner = () => {
   const [selectedRecipe, setSelectedRecipe] = useState<typeof recipes[0] | null>(null);
   const [servings, setServings] = useState(4);
   const { toggleFavorite, isFavorite } = useFavorites();
+  const { getRecipesByCategory } = useRecipes();
+  
+  const userRecipes = getRecipesByCategory('dinner');
+  const allRecipes = [...recipes, ...userRecipes];
 
   const handleCardClick = (recipe: typeof recipes[0]) => {
     setSelectedRecipe(recipe);
@@ -141,7 +146,7 @@ const Dinner = () => {
           Dinner Recipes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {recipes.map((recipe) => (
+          {allRecipes.map((recipe) => (
             <Card
               key={recipe.id}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"

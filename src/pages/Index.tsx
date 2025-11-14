@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Upload } from "lucide-react";
+import { RecipeUpload } from "@/components/RecipeUpload";
 
 const categories = [
   {
@@ -36,10 +39,21 @@ const categories = [
 ];
 
 const Index = () => {
+  const [uploadOpen, setUploadOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 relative">
+          <Button
+            onClick={() => setUploadOpen(true)}
+            size="icon"
+            className="absolute top-4 right-4"
+            title="Upload Recipe"
+          >
+            <Upload className="h-5 w-5" />
+          </Button>
+          
           <h1 className="text-4xl md:text-6xl font-aharoni font-bold text-primary text-center">
             Chappies voor Wappies
           </h1>
@@ -48,6 +62,8 @@ const Index = () => {
           </p>
         </div>
       </header>
+
+      <RecipeUpload open={uploadOpen} onOpenChange={setUploadOpen} />
 
       <main className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

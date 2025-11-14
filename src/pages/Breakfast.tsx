@@ -5,29 +5,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Home, Minus, Plus, Clock, Leaf, Printer, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "@/hooks/use-favorites";
-
-interface Ingredient {
-  name: string;
-  amount: number;
-  unit: string;
-}
-
-interface Recipe {
-  id: number;
-  title: string;
-  image: string;
-  description: string;
-  prepTime: number;
-  isVegan: boolean;
-  isVegetarian: boolean;
-  baseServings: number;
-  ingredients: Ingredient[];
-  steps: string[];
-}
+import { useRecipes, Ingredient, Recipe } from "@/hooks/use-recipes";
 
 const breakfastRecipes: Recipe[] = [
   {
-    id: 1,
+    id: "1",
     title: "Classic Pancakes",
     image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&q=80",
     description: "Fluffy homemade pancakes perfect for a weekend morning",
@@ -35,6 +17,7 @@ const breakfastRecipes: Recipe[] = [
     isVegan: false,
     isVegetarian: true,
     baseServings: 4,
+    category: 'breakfast',
     ingredients: [
       { name: "All-purpose flour", amount: 2, unit: "cups" },
       { name: "Sugar", amount: 2, unit: "tbsp" },
@@ -54,7 +37,7 @@ const breakfastRecipes: Recipe[] = [
     ]
   },
   {
-    id: 2,
+    id: "2",
     title: "Avocado Toast",
     image: "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800&q=80",
     description: "Simple yet delicious avocado toast with a twist",
@@ -62,6 +45,7 @@ const breakfastRecipes: Recipe[] = [
     isVegan: true,
     isVegetarian: true,
     baseServings: 4,
+    category: 'breakfast',
     ingredients: [
       { name: "Bread slices", amount: 4, unit: "slices" },
       { name: "Ripe avocados", amount: 2, unit: "pcs" },
@@ -80,7 +64,7 @@ const breakfastRecipes: Recipe[] = [
     ]
   },
   {
-    id: 3,
+    id: "3",
     title: "Berry Smoothie Bowl",
     image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80",
     description: "Refreshing and nutritious smoothie bowl",
@@ -88,6 +72,7 @@ const breakfastRecipes: Recipe[] = [
     isVegan: false,
     isVegetarian: true,
     baseServings: 4,
+    category: 'breakfast',
     ingredients: [
       { name: "Frozen mixed berries", amount: 4, unit: "cups" },
       { name: "Banana", amount: 2, unit: "pcs" },
@@ -112,6 +97,10 @@ const Breakfast = () => {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [servings, setServings] = useState(4);
   const { toggleFavorite, isFavorite } = useFavorites();
+  const { getRecipesByCategory } = useRecipes();
+  
+  const userRecipes = getRecipesByCategory('breakfast');
+  const allRecipes = [...breakfastRecipes, ...userRecipes];
 
   const handleOpenRecipe = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
@@ -140,7 +129,7 @@ const Breakfast = () => {
   const handleFavoriteClick = (e: React.MouseEvent, recipe: Recipe) => {
     e.stopPropagation();
     toggleFavorite({
-      id: recipe.id.toString(),
+      id: recipe.id,
       title: recipe.title,
       image: recipe.image,
       category: 'breakfast'
@@ -172,7 +161,7 @@ const Breakfast = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {breakfastRecipes.map((recipe) => (
+          {allRecipes.map((recipe) => (
             <Card 
               key={recipe.id} 
               className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
@@ -199,7 +188,7 @@ const Breakfast = () => {
                     className="shrink-0"
                   >
                     <Heart
-                      className={`h-5 w-5 ${isFavorite(recipe.id.toString()) ? 'fill-red-500 text-red-500' : ''}`}
+                      className={`h-5 w-5 ${isFavorite(recipe.id) ? 'fill-red-500 text-red-500' : ''}`}
                     />
                   </Button>
                 </div>
