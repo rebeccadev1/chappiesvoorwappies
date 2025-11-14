@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { ChevronDown, ChevronUp, Home, Minus, Plus, Printer, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "@/hooks/use-favorites";
+import { useRecipes } from "@/hooks/use-recipes";
 
 const recipes = [
   {
@@ -12,7 +13,7 @@ const recipes = [
     title: "Hummus",
     description: "Creamy chickpea dip with tahini",
     image: "https://images.unsplash.com/photo-1571312289170-0d157c1b5b0e?w=800&q=80",
-    prepTime: "10 min",
+    prepTime: 10,
     isVegan: true,
     isVegetarian: true,
     baseServings: 4,
@@ -37,7 +38,7 @@ const recipes = [
     title: "Loaded Nachos",
     description: "Crispy tortilla chips with cheese and toppings",
     image: "https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=800&q=80",
-    prepTime: "20 min",
+    prepTime: 20,
     isVegan: false,
     isVegetarian: true,
     baseServings: 4,
@@ -62,7 +63,7 @@ const recipes = [
     title: "Energy Balls",
     description: "Healthy no-bake snack balls",
     image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=800&q=80",
-    prepTime: "15 min",
+    prepTime: 15,
     isVegan: true,
     isVegetarian: true,
     baseServings: 12,
@@ -88,6 +89,10 @@ const Snacks = () => {
   const [selectedRecipe, setSelectedRecipe] = useState<typeof recipes[0] | null>(null);
   const [servings, setServings] = useState(4);
   const { toggleFavorite, isFavorite } = useFavorites();
+  const { getRecipesByCategory } = useRecipes();
+  
+  const userRecipes = getRecipesByCategory('snacks');
+  const allRecipes = [...recipes, ...userRecipes];
 
   const handleCardClick = (recipe: typeof recipes[0]) => {
     setSelectedRecipe(recipe);
@@ -134,7 +139,7 @@ const Snacks = () => {
           Snack Recipes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {recipes.map((recipe) => (
+          {allRecipes.map((recipe) => (
             <Card
               key={recipe.id}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
