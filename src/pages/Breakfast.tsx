@@ -10,7 +10,7 @@ import { useRecipes, Ingredient, Recipe } from "@/hooks/use-recipes";
 const breakfastRecipes: Recipe[] = [
   {
     id: "1",
-    title: "Classic Pancakes",
+    title: "x Classic Pancakes",
     image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&q=80",
     description: "Fluffy homemade pancakes perfect for a weekend morning",
     prepTime: 20,
