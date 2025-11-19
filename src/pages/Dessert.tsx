@@ -86,6 +86,178 @@ const recipes = [
       "Fill with apple mixture and dot with butter",
       "Cover with second crust and bake 45 minutes"
     ]
+  },
+  {
+    id: "banana-bread",
+    title: "Banana bread",
+    description: "Moist and sweet banana bread",
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80",
+    prepTime: 70,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 10,
+    ingredients: [
+      { name: "ripe bananas", amount: 4, unit: "" },
+      { name: "flour", amount: 280, unit: "g" },
+      { name: "sugar", amount: 200, unit: "g" },
+      { name: "eggs", amount: 2, unit: "" },
+      { name: "butter", amount: 120, unit: "g" },
+      { name: "baking soda", amount: 1, unit: "tsp" },
+      { name: "vanilla extract", amount: 1, unit: "tsp" },
+      { name: "salt", amount: 0.5, unit: "tsp" }
+    ],
+    steps: [
+      "Preheat oven to 175°C and grease a loaf pan",
+      "Mash bananas in a large bowl",
+      "Mix in melted butter, eggs, sugar, and vanilla",
+      "Add flour, baking soda, and salt",
+      "Pour batter into prepared pan",
+      "Bake for 60 minutes until golden and toothpick comes out clean"
+    ]
+  },
+  {
+    id: "pistache-beschuittaart",
+    title: "Pistache beschuittaart",
+    description: "Dutch rusk cake with pistachio cream",
+    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80",
+    prepTime: 30,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 8,
+    ingredients: [
+      { name: "beschuit (Dutch rusks)", amount: 250, unit: "g" },
+      { name: "butter", amount: 100, unit: "g" },
+      { name: "heavy cream", amount: 400, unit: "ml" },
+      { name: "pistachio paste", amount: 100, unit: "g" },
+      { name: "sugar", amount: 80, unit: "g" },
+      { name: "vanilla extract", amount: 1, unit: "tsp" },
+      { name: "pistachios (chopped)", amount: 50, unit: "g" }
+    ],
+    steps: [
+      "Crush rusks into fine crumbs",
+      "Mix crumbs with melted butter and press into springform pan",
+      "Refrigerate crust for 30 minutes",
+      "Whip cream with sugar and vanilla until stiff peaks form",
+      "Fold in pistachio paste",
+      "Spread cream over crust and top with chopped pistachios",
+      "Refrigerate for at least 3 hours before serving"
+    ]
+  },
+  {
+    id: "appel-peer-plaattaart",
+    title: "Appel/peer plaattaart",
+    description: "Dutch flat apple and pear tart",
+    image: "https://images.unsplash.com/photo-1621955964441-c173e01c135b?w=800&q=80",
+    prepTime: 65,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 8,
+    ingredients: [
+      { name: "puff pastry", amount: 400, unit: "g" },
+      { name: "apples", amount: 3, unit: "" },
+      { name: "pears", amount: 3, unit: "" },
+      { name: "sugar", amount: 100, unit: "g" },
+      { name: "cinnamon", amount: 2, unit: "tsp" },
+      { name: "egg", amount: 1, unit: "" },
+      { name: "apricot jam", amount: 3, unit: "tbsp" }
+    ],
+    steps: [
+      "Preheat oven to 200°C",
+      "Roll out puff pastry on baking sheet",
+      "Peel and slice apples and pears thinly",
+      "Arrange fruit in overlapping rows on pastry",
+      "Sprinkle with sugar and cinnamon",
+      "Brush edges with beaten egg",
+      "Bake 40 minutes until golden",
+      "Brush with warm apricot jam while still hot"
+    ]
+  },
+  {
+    id: "gestoofde-peertjes",
+    title: "Gestoofde peertjes",
+    description: "Dutch stewed pears in red wine and spices",
+    image: "https://images.unsplash.com/photo-1568642295579-90dc8b8c93c0?w=800&q=80",
+    prepTime: 45,
+    isVegan: true,
+    isVegetarian: true,
+    baseServings: 4,
+    ingredients: [
+      { name: "firm pears", amount: 4, unit: "" },
+      { name: "red wine", amount: 500, unit: "ml" },
+      { name: "sugar", amount: 100, unit: "g" },
+      { name: "cinnamon stick", amount: 1, unit: "" },
+      { name: "star anise", amount: 2, unit: "" },
+      { name: "cloves", amount: 3, unit: "" },
+      { name: "lemon zest", amount: 1, unit: "strip" }
+    ],
+    steps: [
+      "Peel pears, keeping stems intact",
+      "Combine wine, sugar, and spices in a pot",
+      "Bring to a simmer and add pears",
+      "Simmer gently for 30 minutes until tender",
+      "Remove pears and reduce sauce by half",
+      "Serve pears with reduced wine syrup"
+    ]
+  },
+  {
+    id: "lemon-posset",
+    title: "Lemon posset",
+    description: "Silky British lemon cream dessert",
+    image: "https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80",
+    prepTime: 15,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 4,
+    ingredients: [
+      { name: "heavy cream", amount: 600, unit: "ml" },
+      { name: "sugar", amount: 150, unit: "g" },
+      { name: "lemon juice", amount: 100, unit: "ml" },
+      { name: "lemon zest", amount: 2, unit: "tsp" }
+    ],
+    steps: [
+      "Heat cream and sugar in a saucepan until simmering",
+      "Simmer for 3 minutes, stirring occasionally",
+      "Remove from heat and stir in lemon juice and zest",
+      "Let cool for 10 minutes",
+      "Pour into serving glasses",
+      "Refrigerate for at least 3 hours until set"
+    ]
+  },
+  {
+    id: "spiced-chai-worteltaart",
+    title: "Spiced chai worteltaart",
+    description: "Carrot cake infused with chai spices",
+    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&q=80",
+    prepTime: 80,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 12,
+    ingredients: [
+      { name: "grated carrots", amount: 300, unit: "g" },
+      { name: "flour", amount: 250, unit: "g" },
+      { name: "sugar", amount: 200, unit: "g" },
+      { name: "eggs", amount: 3, unit: "" },
+      { name: "vegetable oil", amount: 200, unit: "ml" },
+      { name: "baking powder", amount: 2, unit: "tsp" },
+      { name: "cinnamon", amount: 2, unit: "tsp" },
+      { name: "ground ginger", amount: 1, unit: "tsp" },
+      { name: "cardamom", amount: 0.5, unit: "tsp" },
+      { name: "cloves", amount: 0.25, unit: "tsp" },
+      { name: "cream cheese", amount: 200, unit: "g" },
+      { name: "butter", amount: 100, unit: "g" },
+      { name: "powdered sugar", amount: 150, unit: "g" }
+    ],
+    steps: [
+      "Preheat oven to 175°C and grease a cake pan",
+      "Mix flour, baking powder, and spices",
+      "Beat eggs with sugar and oil",
+      "Add dry ingredients and mix well",
+      "Fold in grated carrots",
+      "Pour into pan and bake 45-50 minutes",
+      "Let cool completely",
+      "Beat cream cheese, butter, and powdered sugar for frosting",
+      "Frost cooled cake"
+    ]
   }
 ];
 

@@ -82,6 +82,66 @@ const recipes = [
       "Roll mixture into balls",
       "Refrigerate for 30 minutes"
     ]
+  },
+  {
+    id: "snackbordje-doperwten",
+    title: "Snackbordje met doperwten",
+    description: "Dutch snack board with fresh peas and dips",
+    image: "https://images.unsplash.com/photo-1621939513831-ed593558b0c2?w=800&q=80",
+    prepTime: 20,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 4,
+    ingredients: [
+      { name: "fresh peas", amount: 300, unit: "g" },
+      { name: "cream cheese", amount: 150, unit: "g" },
+      { name: "radishes", amount: 100, unit: "g" },
+      { name: "cherry tomatoes", amount: 150, unit: "g" },
+      { name: "cucumber", amount: 1, unit: "" },
+      { name: "fresh mint", amount: 10, unit: "g" },
+      { name: "lemon juice", amount: 2, unit: "tbsp" },
+      { name: "crackers", amount: 200, unit: "g" }
+    ],
+    steps: [
+      "Blanch fresh peas for 2 minutes and cool in ice water",
+      "Mix cream cheese with lemon juice and chopped mint",
+      "Slice radishes and cucumber thinly",
+      "Arrange all vegetables on a serving board",
+      "Add cream cheese dip in a small bowl",
+      "Serve with crackers on the side"
+    ]
+  },
+  {
+    id: "chocolate-chip-cookies",
+    title: "Chocolate chip cookies",
+    description: "Classic chewy chocolate chip cookies",
+    image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80",
+    prepTime: 25,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 24,
+    ingredients: [
+      { name: "flour", amount: 280, unit: "g" },
+      { name: "butter", amount: 225, unit: "g" },
+      { name: "brown sugar", amount: 200, unit: "g" },
+      { name: "white sugar", amount: 100, unit: "g" },
+      { name: "eggs", amount: 2, unit: "" },
+      { name: "vanilla extract", amount: 2, unit: "tsp" },
+      { name: "baking soda", amount: 1, unit: "tsp" },
+      { name: "salt", amount: 1, unit: "tsp" },
+      { name: "chocolate chips", amount: 300, unit: "g" }
+    ],
+    steps: [
+      "Preheat oven to 190°C",
+      "Cream butter with both sugars until fluffy",
+      "Beat in eggs and vanilla extract",
+      "Mix flour, baking soda, and salt in separate bowl",
+      "Gradually add dry ingredients to butter mixture",
+      "Fold in chocolate chips",
+      "Drop spoonfuls onto baking sheet",
+      "Bake 10-12 minutes until golden brown",
+      "Cool on baking sheet for 5 minutes before transferring"
+    ]
   }
 ];
 
