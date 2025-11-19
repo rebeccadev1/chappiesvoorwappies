@@ -90,6 +90,73 @@ const breakfastRecipes: Recipe[] = [
       "Add chia seeds and honey",
       "Enjoy immediately while cold"
     ]
+  },
+  {
+    id: "4",
+    title: "American Pancakes",
+    image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=800&q=80",
+    description: "Thick and fluffy American-style pancakes",
+    prepTime: 25,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 4,
+    category: 'breakfast',
+    ingredients: [
+      { name: "All-purpose flour", amount: 2, unit: "cups" },
+      { name: "White sugar", amount: 3, unit: "tbsp" },
+      { name: "Baking powder", amount: 3, unit: "tsp" },
+      { name: "Salt", amount: 0.5, unit: "tsp" },
+      { name: "Baking soda", amount: 0.5, unit: "tsp" },
+      { name: "Buttermilk", amount: 1.75, unit: "cups" },
+      { name: "Eggs", amount: 2, unit: "pcs" },
+      { name: "Melted butter", amount: 4, unit: "tbsp" },
+      { name: "Vanilla extract", amount: 1, unit: "tsp" }
+    ],
+    steps: [
+      "Whisk together flour, sugar, baking powder, salt, and baking soda",
+      "In a separate bowl, beat eggs and mix with buttermilk, melted butter, and vanilla",
+      "Pour wet ingredients into dry ingredients and mix until just combined (lumps are okay)",
+      "Let batter rest for 5 minutes",
+      "Heat a griddle or pan over medium heat and grease lightly",
+      "Pour 1/4 cup batter for each pancake",
+      "Cook until bubbles appear on surface and edges look set, about 2-3 minutes",
+      "Flip and cook until golden brown, about 2 minutes more",
+      "Serve hot with butter, maple syrup, and fresh berries"
+    ]
+  },
+  {
+    id: "5",
+    title: "Turkish Eggs (Çılbır)",
+    image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=800&q=80",
+    description: "Poached eggs on garlicky yogurt with spiced butter",
+    prepTime: 15,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 4,
+    category: 'breakfast',
+    ingredients: [
+      { name: "Greek yogurt", amount: 2, unit: "cups" },
+      { name: "Garlic cloves, minced", amount: 2, unit: "pcs" },
+      { name: "Fresh eggs", amount: 8, unit: "pcs" },
+      { name: "White vinegar", amount: 2, unit: "tbsp" },
+      { name: "Butter", amount: 4, unit: "tbsp" },
+      { name: "Paprika", amount: 2, unit: "tsp" },
+      { name: "Aleppo pepper or red pepper flakes", amount: 1, unit: "tsp" },
+      { name: "Fresh dill", amount: 4, unit: "tbsp" },
+      { name: "Salt", amount: 1, unit: "tsp" }
+    ],
+    steps: [
+      "Mix Greek yogurt with minced garlic and salt, let sit at room temperature",
+      "Bring a pot of water to a gentle simmer and add vinegar",
+      "Crack eggs one at a time into a small cup",
+      "Create a gentle whirlpool in the water and slide eggs in carefully",
+      "Poach eggs for 3-4 minutes until whites are set but yolks are runny",
+      "Meanwhile, melt butter in a small pan and add paprika and Aleppo pepper",
+      "Spread garlicky yogurt on serving plates",
+      "Remove poached eggs with a slotted spoon and place on yogurt",
+      "Drizzle spiced butter over eggs",
+      "Garnish with fresh dill and serve immediately with crusty bread"
+    ]
   }
 ];
 
