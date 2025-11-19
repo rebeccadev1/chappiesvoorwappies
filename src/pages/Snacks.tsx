@@ -122,12 +122,12 @@ const Snacks = () => {
       <header className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6 flex items-center justify-between">
           <Link to="/">
-            <h1 className="text-3xl md:text-4xl font-aharoni font-bold cursor-pointer hover:opacity-80 transition-opacity" style={{ color: '#904E55' }}>
+            <h1 className="text-4xl md:text-5xl font-aharoni font-bold cursor-pointer hover:opacity-80 transition-opacity" style={{ color: '#904E55' }}>
               Chappies voor Wappies
             </h1>
           </Link>
           <Link to="/">
-            <Button variant="outline" size="icon">
+            <Button variant="ghost" size="icon">
               <Home className="h-5 w-5" />
             </Button>
           </Link>
@@ -142,20 +142,20 @@ const Snacks = () => {
           {allRecipes.map((recipe) => (
             <Card
               key={recipe.id}
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
               onClick={() => handleCardClick(recipe)}
             >
               <div className="aspect-video overflow-hidden">
                 <img
                   src={recipe.image}
                   alt={recipe.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <CardHeader>
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex-1">
-                    <CardTitle className="font-aharoni text-2xl" style={{ color: '#904E55' }}>
+                    <CardTitle className="font-aharoni text-xl" style={{ color: '#904E55' }}>
                       {recipe.title}
                     </CardTitle>
                     <CardDescription className="text-base flex items-center gap-2 mt-2">
