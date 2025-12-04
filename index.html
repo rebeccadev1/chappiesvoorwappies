@@ -20,34 +20,43 @@
   </nav>
 </header>
 
+<main class="page-main">
   <div id="search-bar">
     <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
   </div>
 
-<section class="category-section">
-  <div class="category-container">
-    <h1>Categories</h1>
-    <div class="card-grid">
-      <div class="recipe-card" onclick="window.location.href='breakfast.html'">
-        <img src="images/breakfast1.jpg" alt="Breakfast">
-        <h3>Breakfast</h3>
+  <section class="category-section">
+    <div class="category-container">
+      <h1>Categories</h1>
+      <p class="category-intro">
+        Discover cozy, tasty recipes for every moment of the day.
+      </p>
+      <div class="card-grid">
+        <div class="recipe-card" onclick="window.location.href='breakfast.html'">
+          <img src="images/breakfast1.jpg" alt="Breakfast">
+          <h3>Breakfast</h3>
+        </div>
+        <div class="recipe-card" onclick="window.location.href='lunch.html'">
+          <img src="images/lunch1.jpg" alt="Lunch">
+          <h3>Lunch</h3>
+        </div>
+        <div class="recipe-card" onclick="window.location.href='dinner.html'">
+          <img src="images/dinner1.jpg" alt="Dinner">
+          <h3>Dinner</h3>
+        </div>
+        <div class="recipe-card" onclick="window.location.href='dessert.html'">
+          <img src="images/dessert1.jpg" alt="Dessert">
+          <h3>Dessert</h3>
+        </div>
       </div>
-      <div class="recipe-card" onclick="window.location.href='lunch.html'">
-        <img src="images/lunch1.jpg" alt="Lunch">
-        <h3>Lunch</h3>
-      </div>
-      <div class="recipe-card" onclick="window.location.href='dinner.html'">
-        <img src="images/dinner1.jpg" alt="Dinner">
-        <h3>Dinner</h3>
-      </div>
-      <div class="recipe-card" onclick="window.location.href='dessert.html'">
-        <img src="images/dessert1.jpg" alt="Dessert">
-        <h3>Dessert</h3>
-      </div>
-    </div>
     </div>
   </section>
+</main>
 
-  <script src="scripts.js"></script>
+<footer class="site-footer">
+  <p>Made with love by <span>Rebecca Jekel</span> · Chappies voor Wappies</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
