@@ -13,7 +13,7 @@
     <div class="site-subtitle">by Rebecca Jekel</div>
   </div>
   <nav>
-    <a href="breakfast.html">Breakfast</a>
+    <a href="breakfast.html" class="active">Breakfast</a>
     <a href="lunch.html">Lunch</a>
     <a href="dinner.html">Dinner</a>
     <a href="dessert.html">Dessert</a>
@@ -23,17 +23,20 @@
 </div>
 </header>
 
-  <main>
-    <h1>Breakfast Recipes</h1>
-    <div class="card-grid">
-      <div class="recipe-card" onclick="openRecipe('breakfast1')">
-        <img src="images/breakfast1.jpg" alt="Avocado Toast">
-        <h3>Avocado Toast</h3>
+  <main class="page-main">
+    <section class="category-section">
+      <div class="category-container">
+        <h1>Breakfast Recipes</h1>
+        <div class="card-grid">
+          <div class="recipe-card" onclick="openRecipe('breakfast1')">
+            <img src="images/breakfast1.jpg" alt="Avocado Toast">
+            <h3>Avocado Toast</h3>
+          </div>
+          <!-- Add more breakfast recipes here -->
+        </div>
+        <div id="recipe-detail"></div>
       </div>
-      <!-- Add more breakfast recipes here -->
-    </div>
-
-    <div id="recipe-detail"></div>
+    </section>
   </main>
 
 <script src="scripts.js"></script>

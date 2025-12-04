@@ -88,6 +88,11 @@ nav a:hover {
   text-decoration: none;
 }
 
+nav a.active {
+  background: #fcfcfc;
+  color: var(--delft);
+}
+
 /* --- Search Bar --- */
 #search-bar {
   text-align: center;

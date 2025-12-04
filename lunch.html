@@ -14,7 +14,7 @@
   </div>
   <nav>
     <a href="breakfast.html">Breakfast</a>
-    <a href="lunch.html">Lunch</a>
+    <a href="lunch.html" class="active">Lunch</a>
     <a href="dinner.html">Dinner</a>
     <a href="dessert.html">Dessert</a>
   </nav>
@@ -23,16 +23,20 @@
   </div>
 </header>
 
-<main>
-  <h1>Lunch Recipes</h1>
-  <div class="card-grid">
-    <div class="recipe-card" onclick="openRecipe('lunch1')">
-      <img src="images/lunch1.jpg" alt="Grilled Chicken Salad">
-      <h3>Grilled Chicken Salad</h3>
+<main class="page-main">
+  <section class="category-section">
+    <div class="category-container">
+      <h1>Lunch Recipes</h1>
+      <div class="card-grid">
+        <div class="recipe-card" onclick="openRecipe('lunch1')">
+          <img src="images/lunch1.jpg" alt="Grilled Chicken Salad">
+          <h3>Grilled Chicken Salad</h3>
+        </div>
+        <!-- Add more lunch recipes here -->
+      </div>
+      <div id="recipe-detail"></div>
     </div>
-    <!-- Add more lunch recipes here -->
-  </div>
-<div id="recipe-detail"></div>
+  </section>
 </main>
 
 <!-- Scripts -->
