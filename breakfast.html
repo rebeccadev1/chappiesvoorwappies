@@ -28,16 +28,35 @@
       <div class="category-container">
         <h1>Breakfast Recipes</h1>
         <div class="card-grid">
-          <div class="recipe-card" onclick="openRecipe('breakfast1')">
-            <img src="images/breakfast1.jpg" alt="Avocado Toast">
-            <h3>Avocado Toast</h3>
+          <div class="recipe-card" data-name="Fluffy Pancakes" onclick="openRecipe('breakfast1')">
+            <img src="images/breakfast1.jpg" alt="Fluffy Pancakes">
+            <h3>Fluffy Pancakes</h3>
             <div class="recipe-meta">
               <span class="badge badge-time">10 min</span>
               <span class="badge badge-diff">Easy</span>
               <span class="badge-soft badge badge-tag">Veggie</span>
             </div>
           </div>
-          <!-- Add more breakfast recipes here -->
+
+          <div class="recipe-card" data-name="American Pancakes" onclick="openRecipe('american-pancakes')">
+            <img src="images/breakfast1.jpg" alt="American Pancakes">
+            <h3>American Pancakes</h3>
+            <div class="recipe-meta">
+              <span class="badge badge-time">25 min</span>
+              <span class="badge badge-diff">Easy</span>
+              <span class="badge-soft badge badge-tag">Veggie</span>
+            </div>
+          </div>
+
+          <div class="recipe-card" data-name="Turkish Eggs" onclick="openRecipe('turkish-eggs')">
+            <img src="images/breakfast1.jpg" alt="Turkish Eggs (Çılbır)">
+            <h3>Turkish Eggs (Çılbır)</h3>
+            <div class="recipe-meta">
+              <span class="badge badge-time">15 min</span>
+              <span class="badge badge-diff">Medium</span>
+              <span class="badge-soft badge badge-tag">Veggie</span>
+            </div>
+          </div>
         </div>
         <p id="no-results" class="no-results" style="display:none;">No recipes found. Try another term.</p>
         <div id="recipe-detail"></div>
@@ -47,6 +66,8 @@
 
 <script src="scripts.js"></script>
 <script src="recipes/breakfast/breakfast1.js"></script>
+<script src="recipes/breakfast/american-pancakes.js"></script>
+<script src="recipes/breakfast/turkish-eggs.js"></script>
 <!-- Recipe Modal -->
 <div id="recipe-modal" class="modal-overlay" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true">

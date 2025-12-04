@@ -83,6 +83,27 @@ const recipes = [
     ]
   },
   {
+    id: "simple-baguette",
+    title: "Baguette met roomboter",
+    description: "Vers afgebakken baguette met goede roomboter en een snuf zeezout",
+    image: "https://images.unsplash.com/photo-1528712306091-ed0763094c08?w=800&q=80",
+    prepTime: 5,
+    isVegan: false,
+    isVegetarian: true,
+    baseServings: 2,
+    ingredients: [
+      { name: "verse baguette", amount: 1, unit: "st" },
+      { name: "goede roomboter", amount: 40, unit: "g" },
+      { name: "zee zoutvlokken", amount: 1, unit: "snuf" }
+    ],
+    steps: [
+      "Snijd de baguette in mooie plakken of in de lengte open",
+      "Laat de roomboter op kamertemperatuur komen zodat hij goed smeerbaar is",
+      "Besmeer het brood royaal met boter",
+      "Bestrooi met een snuf zeezout en serveer direct"
+    ]
+  },
+  {
     id: "caramelized-onion-hazelnut-soup",
     title: "Soep van gekarameliseerde ui en hazelnoot",
     description: "Caramelized onion soup with toasted hazelnuts",
