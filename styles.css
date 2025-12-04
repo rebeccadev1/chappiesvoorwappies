@@ -39,18 +39,34 @@ body {
 }
 
 /* --- Header --- */
-header { margin: 0; padding: 0; }
+header {
+  margin: 0;
+  padding: 0;
+  background: var(--rosewood);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
 
-.header-top {
-  background-color: var(--rosewood);
-  text-align: center;
-  padding: 0.8em 0;
+.header-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
 }
 
 .site-title {
   display: block;
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 1.6em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: #fff;
   text-decoration: none;
   margin: 0;
@@ -60,19 +76,17 @@ header { margin: 0; padding: 0; }
 .site-title:active { color:#fff; text-decoration:none; }
 
 .site-subtitle {
-  font-size: 0.9em;
-  color: #fff;
-  margin-top: 0.2em;
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.86);
+  margin-top: 0.15em;
 }
 
 /* --- Navigation --- */
 nav {
   display: flex;
   justify-content: center;
-  gap: 1em;
-  background-color: var(--delft);
-  padding: 0.6em 1.25rem;
-  border-bottom: 1px solid var(--divider);
+  align-items: center;
+  gap: 0.35em;
 }
 nav a,
 nav a:visited,
@@ -80,8 +94,11 @@ nav a:active {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: .35em .6em;
-  border-radius: 10px;
+  padding: .35em .9em;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 nav a:hover { 
   background: rgba(255,255,255,0.16);
@@ -92,6 +109,17 @@ nav a:hover {
 nav a.active {
   background: #fcfcfc;
   color: var(--delft);
+}
+
+@media (max-width: 640px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 /* --- Search Bar --- */
