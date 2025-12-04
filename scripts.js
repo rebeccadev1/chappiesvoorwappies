@@ -21,12 +21,20 @@ function filterRecipes() {
   if (!grid) return;
 
   const cards = grid.querySelectorAll(".recipe-card");
+  let visibleCount = 0;
   cards.forEach(card => {
     const titleText = card.querySelector("h3")?.textContent || "";
     const nameAttr = card.getAttribute("data-name") || "";
     const haystack = (titleText + " " + nameAttr).toLowerCase();
-    card.style.display = haystack.includes(term) ? "block" : "none";
+    const matches = haystack.includes(term);
+    card.style.display = matches ? "block" : "none";
+    if (matches) visibleCount++;
   });
+
+  const msg = document.getElementById("no-results");
+  if (msg) {
+    msg.style.display = visibleCount === 0 && term ? "block" : "none";
+  }
 }
 
 /* ========== MODAL RECIPE VIEW ========== */

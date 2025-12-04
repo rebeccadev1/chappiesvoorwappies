@@ -31,10 +31,15 @@
         <div class="recipe-card" onclick="openRecipe('dessert1')">
           <img src="images/dessert1.jpg" alt="Chocolate Cake">
           <h3>Chocolate Cake</h3>
+          <div class="recipe-meta">
+            <span>45 min · Medium</span>
+            <span class="badge">Chocolate lover</span>
+          </div>
         </div>
         <!-- Add more dessert recipes here -->
       </div>
 
+      <p id="no-results" class="no-results" style="display:none;">No recipes found. Try another term.</p>
       <div id="recipe-detail"></div>
     </div>
   </section>
