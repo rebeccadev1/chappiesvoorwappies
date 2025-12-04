@@ -4,6 +4,9 @@ recipes["dessert1"] = {
   title: "Chocolate Mousse",
   image: "images/dessert1.jpg",
   defaultServings: 4,
+  time: "45 min",
+  difficulty: "Medium",
+  tags: ["Chocolate lover"],
   ingredients: [
     { amount: 200, unit: "g", name: "dark chocolate" },
     { amount: 3, unit: "", name: "eggs, separated" },

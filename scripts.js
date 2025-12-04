@@ -62,8 +62,22 @@ function openRecipe(id) {
     .map(step => `<li>${step}</li>`)
     .join("");
 
+  const metaChips = [];
+  if (r.time) {
+    metaChips.push(`<span class="badge badge-time">${r.time}</span>`);
+  }
+  if (r.difficulty) {
+    metaChips.push(`<span class="badge badge-diff">${r.difficulty}</span>`);
+  }
+  if (Array.isArray(r.tags)) {
+    r.tags.forEach(tag => {
+      metaChips.push(`<span class="badge badge-tag">${tag}</span>`);
+    });
+  }
+
   detail.innerHTML = `
     <h2>${r.title}</h2>
+    ${metaChips.length ? `<div class="recipe-meta">${metaChips.join("")}</div>` : ""}
     ${r.image ? `<img src="${r.image}" alt="${r.title}">` : ""}
     <label style="display:block; margin-top:10px;">
       Number of persons:

@@ -4,6 +4,9 @@ recipes["dinner1"] = {
   title: "Spaghetti Bolognese",
   image: "images/dinner1.jpg",
   defaultServings: 4,
+  time: "35 min",
+  difficulty: "Medium",
+  tags: ["Family favorite"],
   ingredients: [
     { amount: 400, unit: "g", name: "spaghetti" },
     { amount: 500, unit: "g", name: "ground beef" },

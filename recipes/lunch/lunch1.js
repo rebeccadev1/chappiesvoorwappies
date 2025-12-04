@@ -4,6 +4,9 @@ recipes["lunch1"] = {
   title: "Grilled Chicken Salad",
   image: "images/lunch1.jpg",
   defaultServings: 4,
+  time: "20 min",
+  difficulty: "Medium",
+  tags: ["High protein"],
   ingredients: [
     { amount: 400, unit: "g", name: "grilled chicken breast, sliced" },
     { amount: 200, unit: "g", name: "mixed salad greens" },

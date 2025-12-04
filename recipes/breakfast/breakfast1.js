@@ -4,6 +4,9 @@ recipes["breakfast1"] = {
   title: "Fluffy Pancakes",
   image: "images/breakfast1.jpg",
   defaultServings: 4,
+  time: "10 min",
+  difficulty: "Easy",
+  tags: ["Veggie"],
   ingredients: [
     { amount: 200, unit: "g", name: "all-purpose flour" },
     { amount: 2, unit: "tbsp", name: "sugar" },
