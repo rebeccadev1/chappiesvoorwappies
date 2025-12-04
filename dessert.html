@@ -28,16 +28,70 @@
     <div class="category-container">
       <h1>Dessert Recipes</h1>
       <div class="card-grid">
-        <div class="recipe-card" onclick="openRecipe('dessert1')">
-          <img src="images/dessert1.jpg" alt="Chocolate Cake">
-          <h3>Chocolate Cake</h3>
+        <div class="recipe-card" data-name="Chocolate Mousse" onclick="openRecipe('dessert1')">
+          <img src="images/dessert1.jpg" alt="Chocolate Mousse">
+          <h3>Chocolate Mousse</h3>
           <div class="recipe-meta">
             <span class="badge badge-time">45 min</span>
             <span class="badge badge-diff">Medium</span>
             <span class="badge badge-tag">Chocolate lover</span>
           </div>
         </div>
-        <!-- Add more dessert recipes here -->
+
+        <div class="recipe-card" data-name="Banana bread" onclick="openRecipe('banana-bread')">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Banana bread">
+          <h3>Banana bread</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">70 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Pistache beschuittaart" onclick="openRecipe('pistache-beschuittaart')">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80" alt="Pistache beschuittaart">
+          <h3>Pistache beschuittaart</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">30 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Appel/peer plaattaart" onclick="openRecipe('appel-peer-plaattaart')">
+          <img src="https://images.unsplash.com/photo-1621955964441-c173e01c135b?w=800&q=80" alt="Appel/peer plaattaart">
+          <h3>Appel/peer plaattaart</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">65 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Gestoofde peertjes" onclick="openRecipe('gestoofde-peertjes')">
+          <img src="https://images.unsplash.com/photo-1568642295579-90dc8b8c93c0?w=800&q=80" alt="Gestoofde peertjes">
+          <h3>Gestoofde peertjes</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">45 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Vegan</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Lemon posset" onclick="openRecipe('lemon-posset')">
+          <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80" alt="Lemon posset">
+          <h3>Lemon posset</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">15 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Spiced chai worteltaart" onclick="openRecipe('spiced-chai-worteltaart')">
+          <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&q=80" alt="Spiced chai worteltaart">
+          <h3>Spiced chai worteltaart</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">80 min</span>
+            <span class="badge badge-diff">Medium</span>
+          </div>
+        </div>
       </div>
 
       <p id="no-results" class="no-results" style="display:none;">No recipes found. Try another term.</p>
@@ -48,6 +102,12 @@
 
 <script src="scripts.js"></script>
 <script src="recipes/dessert/dessert1.js"></script>
+<script src="recipes/dessert/banana-bread.js"></script>
+<script src="recipes/dessert/pistache-beschuittaart.js"></script>
+<script src="recipes/dessert/appel-peer-plaattaart.js"></script>
+<script src="recipes/dessert/gestoofde-peertjes.js"></script>
+<script src="recipes/dessert/lemon-posset.js"></script>
+<script src="recipes/dessert/spiced-chai-worteltaart.js"></script>
 <!-- Recipe Modal -->
 <div id="recipe-modal" class="modal-overlay" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true">

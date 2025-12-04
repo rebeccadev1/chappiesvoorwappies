@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snacks – Chappies voor Wappies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="index.html" class="site-title">Chappies voor Wappies</a>
+    <div class="site-subtitle">by Rebecca Jekel</div>
+  </div>
+  <nav>
+    <a href="breakfast.html">Breakfast</a>
+    <a href="lunch.html">Lunch</a>
+    <a href="dinner.html">Dinner</a>
+    <a href="dessert.html">Dessert</a>
+    <a href="snacks.html" class="active">Snacks</a>
+  </nav>
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="category-section">
+    <div class="category-container">
+      <h1>Snack Recipes</h1>
+      <div class="card-grid">
+        <div class="recipe-card" data-name="Hummus" onclick="openRecipe('snacks-hummus')">
+          <img src="https://images.unsplash.com/photo-1571312289170-0d157c1b5b0e?w=800&q=80" alt="Hummus">
+          <h3>Hummus</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">10 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Vegan</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Loaded nachos" onclick="openRecipe('snacks-nachos')">
+          <img src="https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=800&q=80" alt="Loaded nachos">
+          <h3>Loaded nachos</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">20 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Energy balls" onclick="openRecipe('snacks-energy-balls')">
+          <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=800&q=80" alt="Energy balls">
+          <h3>Energy balls</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">15 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Vegan</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Snackbordje met doperwten" onclick="openRecipe('snacks-snackbordje-doperwten')">
+          <img src="https://images.unsplash.com/photo-1621939513831-ed593558b0c2?w=800&q=80" alt="Snackbordje met doperwten">
+          <h3>Snackbordje met doperwten</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">20 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-name="Chocolate chip cookies" onclick="openRecipe('snacks-chocolate-chip-cookies')">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80" alt="Chocolate chip cookies">
+          <h3>Chocolate chip cookies</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">25 min</span>
+            <span class="badge badge-diff">Easy</span>
+          </div>
+        </div>
+      </div>
+      <p id="no-results" class="no-results" style="display:none;">No recipes found. Try another term.</p>
+      <div id="recipe-detail"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Scripts -->
+<script src="scripts.js"></script>
+<script src="recipes/snacks-hummus.js"></script>
+<script src="recipes/snacks-nachos.js"></script>
+<script src="recipes/snacks-energy-balls.js"></script>
+<script src="recipes/snacks-snackbordje-doperwten.js"></script>
+<script src="recipes/snacks-chocolate-chip-cookies.js"></script>
+
+<!-- Recipe Modal -->
+<div id="recipe-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeRecipe()" aria-label="Close">×</button>
+    <div id="recipe-detail" class="modal-content"></div>
+  </div>
+</div>
+</body>
+</html>
+
+
