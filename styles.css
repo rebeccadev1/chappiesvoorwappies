@@ -185,14 +185,14 @@ h1 { text-align: center; margin-bottom: 0.25em; }
   align-items: center;
   padding: 0.1rem 0.6rem;
   border-radius: 999px;
-  background: rgba(0,107,166,0.06);
-  color: var(--delft);
+  background: rgba(107,15,26,0.08); /* rosewood tint */
+  color: var(--rosewood);
   font-weight: 600;
   font-size: 0.78rem;
 }
 
 .badge-soft {
-  background: rgba(167,134,130,0.12);
+  background: rgba(167,134,130,0.18);
   color: var(--rosewood);
 }
 
@@ -205,15 +205,11 @@ h1 { text-align: center; margin-bottom: 0.25em; }
 }
 
 .badge-time::before {
-  content: "⏱";
+  content: "⧗";
 }
 
 .badge-diff::before {
   content: "★";
-}
-
-.badge-tag::before {
-  content: "🏷";
 }
 
 /* --- Form elements --- */
