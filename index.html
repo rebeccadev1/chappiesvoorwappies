@@ -1,28 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chappies-recipe-boutique</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chappies voor Wappies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="index.html" class="site-title">Chappies voor Wappies</a>
+    <div class="site-subtitle">by Rebecca Jekel</div>
+  </div>
+  <nav>
+    <a href="breakfast.html">Breakfast</a>
+    <a href="lunch.html">Lunch</a>
+    <a href="dinner.html">Dinner</a>
+    <a href="dessert.html">Dessert</a>
+  </nav>
+</header>
 
-    <meta property="og:title" content="chappies-recipe-boutique" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
+  </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aharoni:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+<section class="category-section">
+  <div class="category-container">
+    <h1>Categories</h1>
+    <div class="card-grid">
+      <div class="recipe-card" onclick="window.location.href='breakfast.html'">
+        <img src="images/breakfast1.jpg" alt="Breakfast">
+        <h3>Breakfast</h3>
+      </div>
+      <div class="recipe-card" onclick="window.location.href='lunch.html'">
+        <img src="images/lunch1.jpg" alt="Lunch">
+        <h3>Lunch</h3>
+      </div>
+      <div class="recipe-card" onclick="window.location.href='dinner.html'">
+        <img src="images/dinner1.jpg" alt="Dinner">
+        <h3>Dinner</h3>
+      </div>
+      <div class="recipe-card" onclick="window.location.href='dessert.html'">
+        <img src="images/dessert1.jpg" alt="Dessert">
+        <h3>Dessert</h3>
+      </div>
+    </div>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script src="scripts.js"></script>
+</body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dessert – Chappies voor Wappies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="index.html" class="site-title">Chappies voor Wappies</a>
+    <div class="site-subtitle">by Rebecca Jekel</div>
+  </div>
+  <nav>
+    <a href="breakfast.html">Breakfast</a>
+    <a href="lunch.html">Lunch</a>
+    <a href="dinner.html">Dinner</a>
+    <a href="dessert.html">Dessert</a>
+  </nav>
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
+  </div>
+</header>
+
+<main>
+  <h1>Dessert Recipes</h1>
+  <div class="card-grid">
+    <div class="recipe-card" onclick="openRecipe('dessert1')">
+      <img src="images/dessert1.jpg" alt="Chocolate Cake">
+      <h3>Chocolate Cake</h3>
+    </div>
+    <!-- Add more dessert recipes here -->
+  </div>
+
+  <div id="recipe-detail"></div>
+</main>
+
+<script src="scripts.js"></script>
+<script src="recipes/dessert/dessert1.js"></script>
+<!-- Recipe Modal -->
+<div id="recipe-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeRecipe()" aria-label="Close">×</button>
+    <div id="recipe-detail" class="modal-content"></div>
+  </div>
+</div>
+</body>
+</html>
+
