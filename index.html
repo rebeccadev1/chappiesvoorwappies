@@ -7,97 +7,236 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <div class="header-top">
-    <a href="index.html" class="site-title">Chappies voor Wappies</a>
-    <div class="site-subtitle">by Rebecca Jekel</div>
+<!-- Sticky Header -->
+<header class="home-header">
+  <div class="header-container">
+    <h1 class="site-title-home">Chappies voor Wappies</h1>
+    <div class="site-subtitle-home">by Rebecca Jekel</div>
   </div>
-  <nav>
-    <a href="breakfast.html">Breakfast</a>
-    <a href="lunch.html">Lunch</a>
-    <a href="dinner.html">Dinner</a>
-    <a href="dessert.html">Dessert</a>
-    <a href="snacks.html">Snacks</a>
-  </nav>
 </header>
 
-<main class="page-main">
-  <div id="search-bar">
-    <input type="text" id="search-input" placeholder="Search recipes..." oninput="filterRecipes()" />
-  </div>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h2 class="hero-headline">Find your next meal here</h2>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+      <input 
+        type="text" 
+        id="search-input" 
+        class="hero-search-input"
+        placeholder="Search an ingredient, recipe or cuisine..." 
+        oninput="handleGlobalSearch()"
+      />
+      <button id="clear-search" class="clear-search-btn" onclick="clearSearch()" style="display:none;">×</button>
+    </div>
 
-  <section class="category-section">
-    <div class="category-container">
-      <h1>Categories</h1>
-      <p class="category-intro" style="text-align: center;">
-        Discover cozy, tasty recipes for every moment of the day.
-      </p>
-      <div class="card-grid">
-        <div class="recipe-card" onclick="window.location.href='breakfast.html'">
+    <!-- Search Results -->
+    <div id="search-results" class="search-results" style="display:none;"></div>
+    <p id="no-results" class="no-results" style="display:none;">Geen recepten gevonden. Probeer een andere zoekterm.</p>
+  </div>
+</section>
+
+<!-- Category Cards -->
+<section class="categories-section" id="categories-section">
+  <div class="container">
+    <div class="category-grid">
+      <a href="breakfast.html" class="category-card">
+        <div class="category-image">
           <img src="images/breakfast1.jpg" alt="Breakfast">
+        </div>
+        <div class="category-content">
           <h3>Breakfast</h3>
-          <div class="recipe-meta">
-            <p class="category-intro" style="text-align: center;">
-              <span style="font-size: 0.92em; color: var(--rosewood); font-style: italic;">
-                Start your day with some energy
-              </span>
-            </p>
-          </div>
+          <p>Start your day with delicious morning recipes</p>
         </div>
-        <div class="recipe-card" onclick="window.location.href='lunch.html'">
+      </a>
+      
+      <a href="lunch.html" class="category-card">
+        <div class="category-image">
           <img src="images/lunch1.jpg" alt="Lunch">
+        </div>
+        <div class="category-content">
           <h3>Lunch</h3>
-          <div class="recipe-meta">
-            <p class="category-intro" style="text-align: center;">
-              <span style="font-size: 0.92em; color: var(--rosewood); font-style: italic;">
-                To help you get through the day
-              </span>            
-            </p>          
-          </div>
+          <p>Perfect midday meals to keep you energized</p>
         </div>
-        <div class="recipe-card" onclick="window.location.href='dinner.html'">
+      </a>
+      
+      <a href="dinner.html" class="category-card">
+        <div class="category-image">
           <img src="images/dinner1.jpg" alt="Dinner">
+        </div>
+        <div class="category-content">
           <h3>Dinner</h3>
-          <div class="recipe-meta">
-            <p class="category-intro" style="text-align: center;">
-              <span style="font-size: 0.92em; color: var(--rosewood); font-style: italic;">
-                Comfort plates
-              </span>
-            </p>          
-          </div>
+          <p>Hearty evening dishes for the whole family</p>
         </div>
-        <div class="recipe-card" onclick="window.location.href='dessert.html'">
-          <img src="images/dessert1.jpg" alt="Dessert">
+      </a>
+      
+      <a href="dessert.html" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Dessert">
+        </div>
+        <div class="category-content">
           <h3>Dessert</h3>
-          <div class="recipe-meta">
-            <p class="category-intro" style="text-align: center;">
-              <span style="font-size: 0.92em; color: var(--rosewood); font-style: italic;">
-                Always a sweet treat...
-              </span>
-            </p>          
-          </div>
+          <p>Sweet treats to satisfy your cravings</p>
         </div>
-        <div class="recipe-card" onclick="window.location.href='snacks.html'">
-          <img src="https://images.unsplash.com/photo-1621939513831-ed593558b0c2?w=800&q=80" alt="Snacks">
+      </a>
+      
+      <a href="snacks.html" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=800&q=80" alt="Snacks">
+        </div>
+        <div class="category-content">
           <h3>Snacks</h3>
+          <p>Quick bites for any time of day</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Rebecca's Favorites Section -->
+<section class="favorites-section" id="favorites-section">
+  <div class="container">
+    <h2 class="favorites-title">Rebecca's Favorites</h2>
+    <div class="favorites-grid">
+      <div class="recipe-card" onclick="openRecipe('american-pancakes')">
+        <div class="recipe-image">
+          <img src="images/breakfast1.jpg" alt="American Pancakes">
+        </div>
+        <div class="recipe-content">
+          <h3>American Pancakes</h3>
           <div class="recipe-meta">
-            <p class="category-intro" style="text-align: center;">
-              <span style="font-size: 0.92em; color: var(--rosewood); font-style: italic;">
-                Perfect for in between
-              </span>
-            </p>          
+            <span class="badge badge-time">25 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Veggie</span>
           </div>
         </div>
       </div>
-      <p id="no-results" class="no-results" style="display:none;">No matching categories. Try a different word.</p>
+
+      <div class="recipe-card" onclick="openRecipe('bao-buns')">
+        <div class="recipe-image">
+          <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80" alt="Bao buns">
+        </div>
+        <div class="recipe-content">
+          <h3>Bao buns</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">90 min</span>
+            <span class="badge badge-diff">Medium</span>
+            <span class="badge badge-tag">Asian</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('banana-bread')">
+        <div class="recipe-image">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="Banana bread">
+        </div>
+        <div class="recipe-content">
+          <h3>Banana bread</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">70 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Veggie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe('tosti-camembert-blueberry')">
+        <div class="recipe-image">
+          <img src="images/lunch1.jpg" alt="Tosti camembert, blauwe bessen">
+        </div>
+        <div class="recipe-content">
+          <h3>Tosti camembert, blauwe bessen</h3>
+          <div class="recipe-meta">
+            <span class="badge badge-time">10 min</span>
+            <span class="badge badge-diff">Easy</span>
+            <span class="badge-soft badge badge-tag">Veggie</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer class="site-footer" style="text-align: center;">
   <p>Made with love by <span>Rebecca Jekel</span> · Chappies voor Wappies</p>
 </footer>
 
+<!-- Recipe Modal -->
+<div id="recipe-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeRecipe()" aria-label="Close">×</button>
+    <div id="recipe-detail" class="modal-content"></div>
+  </div>
+</div>
+
+<!-- Load all recipe files for global search -->
 <script src="scripts.js"></script>
+<script src="recipes/breakfast/breakfast1.js"></script>
+<script src="recipes/breakfast/american-pancakes.js"></script>
+<script src="recipes/breakfast/turkish-eggs.js"></script>
+<script src="recipes/dinner/dinner1.js"></script>
+<script src="recipes/dinner/bao-buns.js"></script>
+<script src="recipes/dinner/tortillas.js"></script>
+<script src="recipes/dinner/gyoza-soep-met-prei.js"></script>
+<script src="recipes/dinner/rode-curry-gyoza-soep.js"></script>
+<script src="recipes/dinner/pokebowl.js"></script>
+<script src="recipes/dinner/gnocci-pompoen-spinazi-burrata.js"></script>
+<script src="recipes/dinner/pan-pizzas.js"></script>
+<script src="recipes/dinner/ravioli-rode-bieten-gorgonzola.js"></script>
+<script src="recipes/dinner/prei-pasta-broodkruimels.js"></script>
+<script src="recipes/dinner/pasta-witte-druif-camembert.js"></script>
+<script src="recipes/dinner/gevulde-zoete-aardappel.js"></script>
+<script src="recipes/dinner/pasta-gekarameliseerde-ui.js"></script>
+<script src="recipes/dinner/orzo-gochujang-aubergine.js"></script>
+<script src="recipes/dinner/pistache-pasta.js"></script>
+<script src="recipes/dinner/koreaanse-soep.js"></script>
+<script src="recipes/dinner/tacos-pulled-paddos.js"></script>
+<script src="recipes/dinner/rijst-broccoli-sticky-chicken.js"></script>
+<script src="recipes/dinner/tomatenorzo-pancetta-burrata.js"></script>
+<script src="recipes/dinner/shakshuka.js"></script>
+<script src="recipes/dinner/watermeloen-steak-thee-rijst-bimi.js"></script>
+<script src="recipes/dinner/spitskool-misoboter-bieten-hummus.js"></script>
+<script src="recipes/dinner/gnocci-spinazi-carbonara.js"></script>
+<script src="recipes/lunch/lunch1.js"></script>
+<script src="recipes/lunch/simple-baguette.js"></script>
+<script src="recipes/lunch/caramelized-onion-hazelnut-soup.js"></script>
+<script src="recipes/lunch/pita-crispy-chicken.js"></script>
+<script src="recipes/lunch/smoked-chicken-mango-curry.js"></script>
+<script src="recipes/lunch/smoked-chicken-avocado-truffle.js"></script>
+<script src="recipes/lunch/spicy-chicken-boost.js"></script>
+<script src="recipes/lunch/chicken-melt.js"></script>
+<script src="recipes/lunch/roast-beef-truffle.js"></script>
+<script src="recipes/lunch/carpaccio-truffle.js"></script>
+<script src="recipes/lunch/pastrami-horseradish.js"></script>
+<script src="recipes/lunch/blt-boosty.js"></script>
+<script src="recipes/lunch/parma-ham-mozzarella-tapenade.js"></script>
+<script src="recipes/lunch/ricotta-pesto-vegetables.js"></script>
+<script src="recipes/lunch/grilled-pear-goat-cheese.js"></script>
+<script src="recipes/lunch/goat-cheese-mango-chutney.js"></script>
+<script src="recipes/lunch/pita-falafel.js"></script>
+<script src="recipes/lunch/aged-cheese-cress-mustard.js"></script>
+<script src="recipes/lunch/burrata-tomato-pesto.js"></script>
+<script src="recipes/lunch/melted-brie-parma-ham.js"></script>
+<script src="recipes/lunch/melted-brie-apple-honey.js"></script>
+<script src="recipes/lunch/goat-cheese-fig-apple.js"></script>
+<script src="recipes/lunch/tosti-camembert-blueberry.js"></script>
+<script src="recipes/dessert/dessert1.js"></script>
+<script src="recipes/dessert/banana-bread.js"></script>
+<script src="recipes/dessert/pistache-beschuittaart.js"></script>
+<script src="recipes/dessert/appel-peer-plaattaart.js"></script>
+<script src="recipes/dessert/gestoofde-peertjes.js"></script>
+<script src="recipes/dessert/lemon-posset.js"></script>
+<script src="recipes/dessert/spiced-chai-worteltaart.js"></script>
+<script src="recipes/snacks-hummus.js"></script>
+<script src="recipes/snacks-nachos.js"></script>
+<script src="recipes/snacks-energy-balls.js"></script>
+<script src="recipes/snacks-snackbordje-doperwten.js"></script>
+<script src="recipes/snacks-chocolate-chip-cookies.js"></script>
 </body>
 </html>

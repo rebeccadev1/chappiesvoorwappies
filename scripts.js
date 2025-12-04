@@ -11,7 +11,14 @@ window.recipes = window.recipes || {};
 document.addEventListener("DOMContentLoaded", () => {
   // Wire up search if present
   const search = document.getElementById("search-input");
-  if (search) search.addEventListener("input", filterRecipes);
+  if (search) {
+    // Check if we're on homepage (has hero-search-input class)
+    if (search.classList.contains("hero-search-input")) {
+      search.addEventListener("input", handleGlobalSearch);
+    } else {
+      search.addEventListener("input", filterRecipes);
+    }
+  }
 });
 
 /* ========== SEARCH (filters the cards on THIS page) ========== */
@@ -149,8 +156,99 @@ function formatQty(val) {
 /* ========== OPTIONAL NAV HELPERS ========== */
 function goHome() { window.location.href = "index.html"; }
 
+/* ========== GLOBAL SEARCH (Homepage) ========== */
+function handleGlobalSearch() {
+  const term = (document.getElementById("search-input")?.value || "").toLowerCase().trim();
+  const searchResults = document.getElementById("search-results");
+  const noResults = document.getElementById("no-results");
+  const categoriesSection = document.getElementById("categories-section");
+  const favoritesSection = document.getElementById("favorites-section");
+  const clearBtn = document.getElementById("clear-search");
+
+  // Show/hide clear button
+  if (clearBtn) {
+    clearBtn.style.display = term ? "block" : "none";
+  }
+
+  if (!term) {
+    // No search term - show categories and favorites
+    if (searchResults) searchResults.style.display = "none";
+    if (noResults) noResults.style.display = "none";
+    if (categoriesSection) categoriesSection.style.display = "block";
+    if (favoritesSection) favoritesSection.style.display = "block";
+    return;
+  }
+
+  // Hide categories and favorites when searching
+  if (categoriesSection) categoriesSection.style.display = "none";
+  if (favoritesSection) favoritesSection.style.display = "none";
+
+  // Search through all recipes
+  const matchingRecipes = [];
+  for (const id in window.recipes) {
+    const recipe = window.recipes[id];
+    const title = (recipe.title || "").toLowerCase();
+    const ingredients = (recipe.ingredients || [])
+      .map(ing => ing.name.toLowerCase())
+      .join(" ");
+    const tags = (recipe.tags || []).join(" ").toLowerCase();
+    
+    if (title.includes(term) || ingredients.includes(term) || tags.includes(term)) {
+      matchingRecipes.push({ id, ...recipe });
+    }
+  }
+
+  // Display results
+  if (searchResults) {
+    if (matchingRecipes.length > 0) {
+      searchResults.innerHTML = matchingRecipes.map(recipe => {
+        const metaChips = [];
+        if (recipe.time) {
+          metaChips.push(`<span class="badge badge-time">${recipe.time}</span>`);
+        }
+        if (recipe.difficulty) {
+          metaChips.push(`<span class="badge badge-diff">${recipe.difficulty}</span>`);
+        }
+        if (Array.isArray(recipe.tags)) {
+          recipe.tags.forEach(tag => {
+            metaChips.push(`<span class="badge badge-tag">${tag}</span>`);
+          });
+        }
+
+        return `
+          <div class="recipe-card" onclick="openRecipe('${recipe.id}')">
+            <div class="recipe-image">
+              <img src="${recipe.image || ''}" alt="${recipe.title}">
+            </div>
+            <div class="recipe-content">
+              <h3>${recipe.title}</h3>
+              ${metaChips.length ? `<div class="recipe-meta">${metaChips.join("")}</div>` : ""}
+            </div>
+          </div>
+        `;
+      }).join("");
+      searchResults.style.display = "grid";
+      if (noResults) noResults.style.display = "none";
+    } else {
+      searchResults.style.display = "none";
+      if (noResults) noResults.style.display = "block";
+    }
+  }
+}
+
+function clearSearch() {
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) {
+    searchInput.value = "";
+    handleGlobalSearch();
+    searchInput.focus();
+  }
+}
+
 /* ========== EXPOSE FOR INLINE HTML ========== */
 window.openRecipe = openRecipe;
 window.closeRecipe = closeRecipe;
 window.goHome     = goHome;
 window.filterRecipes = filterRecipes;
+window.handleGlobalSearch = handleGlobalSearch;
+window.clearSearch = clearSearch;
