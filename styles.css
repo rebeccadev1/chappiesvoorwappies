@@ -196,6 +196,26 @@ h1 { text-align: center; margin-bottom: 0.25em; }
   color: var(--rosewood);
 }
 
+/* Icon variants for badges */
+.badge-time::before,
+.badge-diff::before,
+.badge-tag::before {
+  display: inline-block;
+  margin-right: 0.35rem;
+}
+
+.badge-time::before {
+  content: "⏱";
+}
+
+.badge-diff::before {
+  content: "★";
+}
+
+.badge-tag::before {
+  content: "🏷";
+}
+
 /* --- Form elements --- */
 input[type="number"] {
   width: 70px;
