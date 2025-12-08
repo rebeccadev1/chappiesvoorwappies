@@ -215,14 +215,14 @@ const Index = () => {
               <p className="text-sm text-muted-foreground hidden sm:block">
                 by Rebecca Jekel
               </p>
-              <Button
-                onClick={() => setUploadOpen(true)}
-                size="icon"
+          <Button
+            onClick={() => setUploadOpen(true)}
+            size="icon"
                 variant="ghost"
-                title="Upload Recipe"
-              >
-                <Upload className="h-5 w-5" />
-              </Button>
+            title="Upload Recipe"
+          >
+            <Upload className="h-5 w-5" />
+          </Button>
             </div>
           </div>
         </div>
@@ -336,32 +336,32 @@ const Index = () => {
           <section className="py-12 bg-white">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
-                {categories.map((category) => (
-                  <Link
-                    key={category.title}
-                    to={category.path}
+          {categories.map((category) => (
+            <Link 
+              key={category.title} 
+              to={category.path}
                     className="group"
-                  >
+            >
                     <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full border-gray-200">
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                          src={category.image}
-                          alt={category.title}
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={category.image}
+                    alt={category.title}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
-                      </div>
-                      <CardHeader>
+                  />
+                </div>
+                <CardHeader>
                         <CardTitle className="font-aharoni text-xl text-foreground group-hover:text-[#904E55] transition-colors">
-                          {category.title}
-                        </CardTitle>
+                    {category.title}
+                  </CardTitle>
                         <CardDescription className="text-sm">
-                          {category.description}
-                        </CardDescription>
-                      </CardHeader>
-                    </Card>
-                  </Link>
-                ))}
-              </div>
+                    {category.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
+          ))}
+        </div>
             </div>
           </section>
 
