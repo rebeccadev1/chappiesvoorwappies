@@ -2,7 +2,7 @@
 
 recipes["turkish-eggs"] = {
   title: "Turkish Eggs (Çılbır)",
-  image: "images/breakfast1.jpg",
+  image: "images/Turkisch Eggs.png",
   defaultServings: 4,
   time: "15 min",
   difficulty: "Medium",
