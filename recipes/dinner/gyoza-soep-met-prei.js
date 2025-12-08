@@ -2,7 +2,7 @@
 
 recipes["gyoza-soep-met-prei"] = {
   title: "Gyoza soep met prei",
-  image: "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
+  image: "images/Gyoza soep.png",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Easy",

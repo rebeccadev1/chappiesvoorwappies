@@ -2,7 +2,7 @@
 
 recipes["orzo-gochujang-aubergine"] = {
   title: "Orzo met gochujang aubergine",
-  image: "https://images.unsplash.com/photo-1633436375436-5bb330c5b95a?w=800&q=80",
+  image: "images/Orzo met gochujang aubergine.png",
   defaultServings: 4,
   time: "40 min",
   difficulty: "Medium",

@@ -2,7 +2,7 @@
 
 recipes["caramelized-onion-hazelnut-soup"] = {
   title: "Soep van gekarameliseerde ui en hazelnoot",
-  image: "images/lunch1.jpg",
+  image: "images/Soep van gekarameliseerde ui en hazelnoot.png",
   defaultServings: 4,
   time: "45 min",
   difficulty: "Medium",

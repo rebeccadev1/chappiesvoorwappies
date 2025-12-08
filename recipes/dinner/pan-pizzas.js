@@ -2,7 +2,7 @@
 
 recipes["pan-pizzas"] = {
   title: "Pan pizza's",
-  image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
+  image: "images/Pan pizzas.png",
   defaultServings: 4,
   time: "40 min",
   difficulty: "Medium",

@@ -2,7 +2,7 @@
 
 recipes["koreaanse-soep"] = {
   title: "Koreaanse soep",
-  image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80",
+  image: "images/Koreaanse soep.png",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Easy",

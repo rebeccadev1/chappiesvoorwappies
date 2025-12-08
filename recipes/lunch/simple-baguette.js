@@ -2,7 +2,7 @@
 
 recipes["simple-baguette"] = {
   title: "Baguette met roomboter",
-  image: "images/lunch1.jpg",
+  image: "images/baguette.png",
   defaultServings: 2,
   time: "5 min",
   difficulty: "Easy",

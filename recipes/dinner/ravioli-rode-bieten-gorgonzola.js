@@ -2,7 +2,7 @@
 
 recipes["ravioli-rode-bieten-gorgonzola"] = {
   title: "Ravioli van rode bieten met gorgonzola",
-  image: "https://images.unsplash.com/photo-1587740908075-9e5b2e00e2d8?w=800&q=80",
+  image: "images/Ravioli van rode bieten met gorgonzola.png",
   defaultServings: 4,
   time: "75 min",
   difficulty: "Hard",

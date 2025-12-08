@@ -2,7 +2,7 @@
 
 recipes["snacks-chocolate-chip-cookies"] = {
   title: "Chocolate chip cookies",
-  image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80",
+  image: "images/Chocolate chip cookies.png",
   defaultServings: 24,
   time: "25 min",
   difficulty: "Easy",

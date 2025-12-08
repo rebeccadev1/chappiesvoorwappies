@@ -2,7 +2,7 @@
 
 recipes["snacks-nachos"] = {
   title: "Loaded nachos",
-  image: "https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=800&q=80",
+  image: "images/Loaded nachos.png",
   defaultServings: 4,
   time: "20 min",
   difficulty: "Easy",

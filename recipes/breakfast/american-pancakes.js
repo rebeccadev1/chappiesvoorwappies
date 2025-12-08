@@ -2,7 +2,7 @@
 
 recipes["american-pancakes"] = {
   title: "American Pancakes",
-  image: "images/breakfast1.jpg",
+  image: "images/American pancakes.png",
   defaultServings: 4,
   time: "25 min",
   difficulty: "Easy",

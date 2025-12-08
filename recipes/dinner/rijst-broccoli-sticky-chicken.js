@@ -2,7 +2,7 @@
 
 recipes["rijst-broccoli-sticky-chicken"] = {
   title: "Rijst met broccoli en sticky chicken/tofu",
-  image: "https://images.unsplash.com/photo-1603073203011-2481d1bb2a8a?w=800&q=80",
+  image: "images/Sticky chicken met brocolli.png",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Medium",

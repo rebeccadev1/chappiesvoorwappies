@@ -2,7 +2,7 @@
 
 recipes["rode-curry-gyoza-soep"] = {
   title: "Rode curry gyoza soep",
-  image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80",
+  image: "images/Rode curry gyoza soep.png",
   defaultServings: 4,
   time: "30 min",
   difficulty: "Easy",

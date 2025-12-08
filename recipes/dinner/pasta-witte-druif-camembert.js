@@ -2,7 +2,7 @@
 
 recipes["pasta-witte-druif-camembert"] = {
   title: "Pasta met witte druif en camembert",
-  image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80",
+  image: "images/Pasta met witte druif en camembert.png",
   defaultServings: 4,
   time: "25 min",
   difficulty: "Easy",

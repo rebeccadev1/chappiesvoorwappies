@@ -2,7 +2,7 @@
 
 recipes["pasta-gekarameliseerde-ui"] = {
   title: "Pasta met gekarameliseerde ui",
-  image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80",
+  image: "images/Pasta met gekarameliseerde ui.png",
   defaultServings: 4,
   time: "45 min",
   difficulty: "Easy",

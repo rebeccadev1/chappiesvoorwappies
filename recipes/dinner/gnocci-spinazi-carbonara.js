@@ -2,7 +2,7 @@
 
 recipes["gnocci-spinazi-carbonara"] = {
   title: "Gnocci met spinazi carbonara saus",
-  image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800&q=80",
+  image: "images/Gnocci carbonara met spinazie.png",
   defaultServings: 4,
   time: "25 min",
   difficulty: "Medium",
