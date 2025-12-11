@@ -2,7 +2,7 @@
 
 recipes["tacos-pulled-paddos"] = {
   title: "Taco's met pulled paddo's",
-  image: "images/Pulled oesterzwam taco's.png",
+  image: "images/Pulled oesterzwammen.jpg",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Easy",

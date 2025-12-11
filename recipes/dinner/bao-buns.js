@@ -2,7 +2,7 @@
 
 recipes["bao-buns"] = {
   title: "Bao buns",
-  image: "images/Bao buns.png",
+  image: "images/Bao buns.jpg",
   defaultServings: 4,
   time: "90 min",
   difficulty: "Medium",

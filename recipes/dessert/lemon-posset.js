@@ -2,7 +2,7 @@
 
 recipes["lemon-posset"] = {
   title: "Lemon posset",
-  image: "https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80",
+  image: "images/Lemon posset.jpg",
   defaultServings: 4,
   time: "15 min + koeltijd",
   difficulty: "Easy",

@@ -2,7 +2,7 @@
 
 recipes["snacks-chocolate-chip-cookies"] = {
   title: "Chocolate chip cookies",
-  image: "images/Chocolate chip cookies.png",
+  image: "images/Chocolate chips.jpg",
   defaultServings: 24,
   time: "25 min",
   difficulty: "Easy",

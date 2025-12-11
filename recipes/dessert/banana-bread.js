@@ -2,7 +2,7 @@
 
 recipes["banana-bread"] = {
   title: "Banana bread",
-  image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80",
+  image: "images/Banana bread.jpg",
   defaultServings: 10,
   time: "70 min",
   difficulty: "Easy",

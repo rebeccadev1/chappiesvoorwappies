@@ -2,7 +2,7 @@
 
 recipes["pokebowl"] = {
   title: "Pokebowl",
-  image: "images/Pokebowl.png",
+  image: "images/Pokebowl.jpg",
   defaultServings: 2,
   time: "25 min",
   difficulty: "Easy",

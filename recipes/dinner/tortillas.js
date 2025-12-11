@@ -2,7 +2,7 @@
 
 recipes["tortillas"] = {
   title: "Tortilla's",
-  image: "images/Wraps.png",
+  image: "images/wraps.jpg",
   defaultServings: 4,
   time: "30 min",
   difficulty: "Easy",

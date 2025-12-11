@@ -2,7 +2,7 @@
 
 recipes["spiced-chai-worteltaart"] = {
   title: "Spiced chai worteltaart",
-  image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&q=80",
+  image: "images/Carrot cake.jpg",
   defaultServings: 12,
   time: "80 min",
   difficulty: "Medium",

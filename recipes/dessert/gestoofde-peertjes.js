@@ -2,7 +2,7 @@
 
 recipes["gestoofde-peertjes"] = {
   title: "Gestoofde peertjes",
-  image: "https://images.unsplash.com/photo-1568642295579-90dc8b8c93c0?w=800&q=80",
+  image: "images/Stoofpeertjes.jpg",
   defaultServings: 4,
   time: "45 min",
   difficulty: "Easy",

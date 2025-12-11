@@ -2,7 +2,7 @@
 
 recipes["pistache-pasta"] = {
   title: "Pistache pasta",
-  image: "images/Pistache pasta.png",
+  image: "images/Pasta pistache.jpg",
   defaultServings: 4,
   time: "25 min",
   difficulty: "Easy",

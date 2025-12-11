@@ -2,7 +2,7 @@
 
 recipes["rode-curry-gyoza-soep"] = {
   title: "Rode curry gyoza soep",
-  image: "images/Rode curry gyoza soep.png",
+  image: "images/gyoza soep met rode curry.jpg",
   defaultServings: 4,
   time: "30 min",
   difficulty: "Easy",

@@ -2,7 +2,7 @@
 
 recipes["shakshuka"] = {
   title: "Shakshuka",
-  image: "images/Shakshuka.png",
+  image: "images/Shakshuka.jpg",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Easy",

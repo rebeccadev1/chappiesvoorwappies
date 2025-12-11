@@ -2,7 +2,7 @@
 
 recipes["pasta-gekarameliseerde-ui"] = {
   title: "Pasta met gekarameliseerde ui",
-  image: "images/Pasta met gekarameliseerde ui.png",
+  image: "images/Pasta met gecarameliseerde ui en sinaasappelsap.jpg",
   defaultServings: 4,
   time: "45 min",
   difficulty: "Easy",

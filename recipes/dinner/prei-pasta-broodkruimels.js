@@ -2,7 +2,7 @@
 
 recipes["prei-pasta-broodkruimels"] = {
   title: "Prei pasta met geroosterde broodkruimels",
-  image: "images/Prei pasta met geroosterde broodkruimels.png",
+  image: "images/prei pasta.jpg",
   defaultServings: 4,
   time: "30 min",
   difficulty: "Easy",

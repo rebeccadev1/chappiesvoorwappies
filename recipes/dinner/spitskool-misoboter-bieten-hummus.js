@@ -2,7 +2,7 @@
 
 recipes["spitskool-misoboter-bieten-hummus"] = {
   title: "Geroosterde spitskool met misoboter op rode bieten hummus",
-  image: "images/Roasted cabbage.png",
+  image: "images/Roasted cabbage.jpg",
   defaultServings: 4,
   time: "40 min",
   difficulty: "Medium",

@@ -245,6 +245,99 @@ function clearSearch() {
   }
 }
 
+/* ========== DYNAMIC CARD RENDERING ========== */
+function renderRecipeCard(recipeId, recipe) {
+  if (!recipe) return '';
+
+  const metaChips = [];
+  if (recipe.time) {
+    metaChips.push(`<span class="badge badge-time">${recipe.time}</span>`);
+  }
+  if (recipe.difficulty) {
+    metaChips.push(`<span class="badge badge-diff">${recipe.difficulty}</span>`);
+  }
+  if (Array.isArray(recipe.tags)) {
+    recipe.tags.forEach(tag => {
+      // Check if tag should be soft (like "Veggie", "Vegan")
+      const isSoftTag = ['Veggie', 'Vegan'].includes(tag);
+      const badgeClass = isSoftTag ? 'badge-soft badge badge-tag' : 'badge badge-tag';
+      metaChips.push(`<span class="${badgeClass}">${tag}</span>`);
+    });
+  }
+
+  return `
+    <div class="recipe-card" data-name="${recipe.title}" onclick="openRecipe('${recipeId}')">
+      ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.title}">` : ''}
+      <h3>${recipe.title}</h3>
+      ${metaChips.length ? `<div class="recipe-meta">${metaChips.join("")}</div>` : ''}
+    </div>
+  `;
+}
+
+function renderCategoryRecipes(recipeIds) {
+  const grid = document.querySelector(".card-grid");
+  if (!grid) return;
+
+  // Clear existing cards (but keep structure)
+  grid.innerHTML = '';
+
+  // Render cards for each recipe
+  recipeIds.forEach(recipeId => {
+    const recipe = window.recipes[recipeId];
+    if (recipe) {
+      const cardHtml = renderRecipeCard(recipeId, recipe);
+      grid.insertAdjacentHTML('beforeend', cardHtml);
+    }
+  });
+}
+
+function renderFavoritesCard(recipeId, recipe) {
+  if (!recipe) return '';
+
+  const metaChips = [];
+  if (recipe.time) {
+    metaChips.push(`<span class="badge badge-time">${recipe.time}</span>`);
+  }
+  if (recipe.difficulty) {
+    metaChips.push(`<span class="badge badge-diff">${recipe.difficulty}</span>`);
+  }
+  if (Array.isArray(recipe.tags)) {
+    recipe.tags.forEach(tag => {
+      // Check if tag should be soft (like "Veggie", "Vegan")
+      const isSoftTag = ['Veggie', 'Vegan'].includes(tag);
+      const badgeClass = isSoftTag ? 'badge-soft badge badge-tag' : 'badge badge-tag';
+      metaChips.push(`<span class="${badgeClass}">${tag}</span>`);
+    });
+  }
+
+  return `
+    <div class="recipe-card" onclick="openRecipe('${recipeId}')">
+      <div class="recipe-image">
+        ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.title}">` : ''}
+      </div>
+      <div class="recipe-content">
+        <h3>${recipe.title}</h3>
+        ${metaChips.length ? `<div class="recipe-meta">${metaChips.join("")}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+function renderFavorites(recipeIds) {
+  const favoritesGrid = document.querySelector('.favorites-grid');
+  if (!favoritesGrid) return;
+  
+  favoritesGrid.innerHTML = '';
+  
+  (recipeIds || window.favoriteRecipeIds || []).forEach(recipeId => {
+    const recipe = window.recipes[recipeId];
+    if (recipe) {
+      const cardHtml = renderFavoritesCard(recipeId, recipe);
+      favoritesGrid.insertAdjacentHTML('beforeend', cardHtml);
+    }
+  });
+}
+
 /* ========== EXPOSE FOR INLINE HTML ========== */
 window.openRecipe = openRecipe;
 window.closeRecipe = closeRecipe;
@@ -252,3 +345,7 @@ window.goHome     = goHome;
 window.filterRecipes = filterRecipes;
 window.handleGlobalSearch = handleGlobalSearch;
 window.clearSearch = clearSearch;
+window.renderCategoryRecipes = renderCategoryRecipes;
+window.renderRecipeCard = renderRecipeCard;
+window.renderFavorites = renderFavorites;
+window.renderFavoritesCard = renderFavoritesCard;

@@ -2,7 +2,7 @@
 
 recipes["gevulde-zoete-aardappel"] = {
   title: "Gevulde zoete aardappel",
-  image: "images/Gevulde zoete aardappel.png",
+  image: "images/Gevulde zoete aardappel.jpg",
   defaultServings: 4,
   time: "50 min",
   difficulty: "Easy",

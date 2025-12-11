@@ -2,7 +2,7 @@
 
 recipes["tomatenorzo-pancetta-burrata"] = {
   title: "Tomatenorzo met pancetta, courgette, burrata",
-  image: "images/Tomatenorzo met parmaham, burrata en courgette.png",
+  image: "images/Orzo met parmaham en burrata.jpg",
   defaultServings: 4,
   time: "30 min",
   difficulty: "Medium",

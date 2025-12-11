@@ -2,7 +2,7 @@
 
 recipes["pistache-beschuittaart"] = {
   title: "Pistache beschuittaart",
-  image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80",
+  image: "images/Pistache taart met framboos.jpg",
   defaultServings: 8,
   time: "30 min + koeltijd",
   difficulty: "Easy",

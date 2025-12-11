@@ -2,7 +2,7 @@
 
 recipes["appel-peer-plaattaart"] = {
   title: "Appel/peer plaattaart",
-  image: "https://images.unsplash.com/photo-1621955964441-c173e01c135b?w=800&q=80",
+  image: "images/Appel peer plaattaart.jpg",
   defaultServings: 8,
   time: "65 min",
   difficulty: "Easy",

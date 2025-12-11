@@ -2,7 +2,7 @@
 
 recipes["gnocci-pompoen-spinazi-burrata"] = {
   title: "Gnocci met pompoen, spinazi, pesto en burrata",
-  image: "images/Gnocci met pompoen, spinazi, pesto en burrata.png",
+  image: "images/Gnocci met pompoen, burata, pesto.jpg",
   defaultServings: 4,
   time: "35 min",
   difficulty: "Medium",

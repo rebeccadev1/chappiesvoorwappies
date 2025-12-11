@@ -2,7 +2,7 @@
 
 recipes["watermeloen-steak-thee-rijst-bimi"] = {
   title: "Watermeloen steak met thee-rijst en bimi",
-image: "images/Watermeloen steak.png",
+image: "images/Watermeloen steak.jpg",
   defaultServings: 4,
   time: "45 min",
   difficulty: "Medium",
