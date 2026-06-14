@@ -29,20 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            index.html
-            breakfast.html
-            lunch.html
-            dinner.html
-            dessert.html
-            snacks.html
-            scripts.js
-            styles.css
-            favicon.svg
-            robots.txt
-            CNAME
-            images
-            recipes
+          path: .
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
