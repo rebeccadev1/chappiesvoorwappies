@@ -642,6 +642,7 @@ body.modal-open { overflow: hidden; }
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 @media (max-width: 1024px) {

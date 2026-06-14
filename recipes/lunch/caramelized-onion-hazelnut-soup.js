@@ -10,11 +10,11 @@ recipes["caramelized-onion-hazelnut-soup"] = {
   ingredients: [
     { amount: 6, unit: "", name: "uien" },
     { amount: 100, unit: "g", name: "hazelnoten" },
-    { amount: 1000, unit: "ml", name: "groentebouillon" },
+    { amount: 1, unit: "l", name: "groentebouillon" },
     { amount: 3, unit: "el", name: "olijfolie" },
-    { amount: 30, unit: "g", name: "boter (of extra olie voor volledig vegan)" },
+    { amount: 30, unit: "g", name: "boter" },
     { amount: 2, unit: "takjes", name: "tijm" },
-    { amount: 1, unit: "naar smaak", name: "zout en peper" }
+    {unit: "naar smaak", name: "zout en peper" }
   ],
   steps: [
     "Snipper de uien en fruit ze langzaam in olijfolie en boter tot ze diep goudbruin en gekarameliseerd zijn (ongeveer 30 minuten op laag vuur).",
