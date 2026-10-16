@@ -3,24 +3,24 @@
 recipes["simple-baguette"] = {
   title: "Baguette",
   image: "images/baguette.jpg",
-  defaultServings: 2,
+  defaultServings: 4,
   time: "3 hours",
   difficulty: "Medium",
   tags: ["Veggie"],
   ingredients: [
-    { amount: 375, unit: "g", name: "flour" },
-    { amount: 1, unit: "pinch", name: "salt" },
-    { amount: 7, unit: "g", name: "instant dry yeast" },
-    { amount: 300, unit: "ml", name: "lukewarm water" }
+    { amount: 350, unit: "g", name: "bloem" },
+    { amount: 1, unit: "tl", name: "zout" },
+    { amount: 1, unit: "tl", name: "instant droge gist" },
+    {amount: 1, unit: "el", name: "suiker"},
+    { amount: 250, unit: "ml", name: "lauwwarm water" }
   ],
   steps: [
-  "Mix the flour and salt in a bowl.",
-  "Add the yeast and water and mix until combined.",
-  "Let the dough rise for 1.5-2 hours.",
-  "Place 300 ml of cold water in a bowl in the oven.",
-  "Preheat the oven to 240°C.",
-  "Cut the dough in 4 pieces, strech and fold each piece 3 times.",
-  "Bake the baguette for 15-20 minutes."
+  "Meng in een kom het water, de gist en de suiker.",
+  "Voeg de bloem en het zout toe en meng tot een glad deeg.",
+  "Laat het deeg 1,5-2 uur rijzen.",
+  "Verdeel in 4 stukken en laat nog 30 minuten rijzen op het ovenrooster.",
+  "Verwarm de oven voor op 255°C.",
+  "Bak de baguette 5 minuten met stoom en daarna nog 15 minuten op 195°C zonder stoom."
   ],
   video: ""
 };

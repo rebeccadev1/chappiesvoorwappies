@@ -4,6 +4,7 @@
 window.lunchRecipes = [
   'simple-baguette',
   'caramelized-onion-hazelnut-soup',
+  'parel-cous-cous',
   'pita-crispy-chicken',
   'smoked-chicken-mango-curry',
   'smoked-chicken-avocado-truffle',
@@ -11,7 +12,6 @@ window.lunchRecipes = [
   'chicken-melt',
   'roast-beef-truffle',
   'carpaccio-truffle',
-  'pastrami-horseradish',
   'blt-boosty',
   'parma-ham-mozzarella-tapenade',
   'ricotta-pesto-vegetables',

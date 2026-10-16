@@ -1,33 +1,33 @@
 // recipes/breakfast/turkish-eggs.js
 
 recipes["turkish-eggs"] = {
-  title: "Turkish Eggs (Çılbır)",
+  title: "Turkse eieren",
   image: "images/Turkish eggs.jpg",
   defaultServings: 2,
   time: "15 min",
   difficulty: "Medium",
   tags: ["Veggie"],
   ingredients: [
-    { amount: 2, unit: "cups", name: "Greek yogurt" },
-    { amount: 2, unit: "cloves", name: "garlic, minced" },
-    { amount: 2, unit: "tbsp", name: "white vinegar" },
-    { amount: 2, unit: "", name: " eggs" },
-    { amount: 200, unit: "g", name: "spinach" },
-    { amount: 2, unit: "pita bread" },
-    { amount: 2, unit: "tsp", name: "paprika powder" },
-    { amount: 2, unit: "tsp", name: "crispy chili oil" },
-    { amount: 2, unit: "tbsp", name: "tahin" },
+    { amount: 480, unit: "ml", name: "Griekse yoghurt" },
+    { amount: 2, unit: "teen", name: "knoflook, fijngehakt" },
+    { amount: 2, unit: "el", name: "witte azijn" },
+    { amount: 2, unit: "", name: "eieren" },
+    { amount: 200, unit: "g", name: "spinazie" },
+    { amount: 2, unit: "", name: "pitabroodjes" },
+    { amount: 2, unit: "tl", name: "paprikapoeder" },
+    { amount: 2, unit: "tl", name: "crispy chili-olie" },
+    { amount: 2, unit: "el", name: "tahin" },
   ],
   steps: [
-    "In a bowl, mix the Greek yogurt with minced garlic and paprika powder. Let it sit at room temperature while you prepare the eggs.",
-    "Crack each egg into a small cup or bowl.",
-    "Create a gentle whirlpool in the simmering water and carefully slide in the eggs one by one.",
-    "Poach the eggs for about 3-4 minutes, until the whites are set but the yolks are still runny.",
-    "In a small pan, wilt the spinach.",
-    "Spread the garlicky yogurt onto serving plates.",
-    "Toast the pita's in a toaster or oven.",
-    "Add the eggs and spinach and garnish with crispy chili oil and tahin.",
-    "Serve immediately with crusty pita breads."
+    "Meng in een kom de Griekse yoghurt met de fijngehakte knoflook en het paprikapoeder.",
+    "Breek elk ei in een apart kopje.",
+    "Maak een draaikolk in het zacht kokende water en laat de eieren er één voor één voorzichtig in glijden.",
+    "Pocheer de eieren 3-4 minuten, tot het eiwit gestold is en de dooier nog vloeibaar (je kunt de eieren ook halfzacht koken).",
+    "Laat de spinazie slinken in een kleine pan.",
+    "Verdeel de knoflookyoghurt over de borden.",
+    "Rooster de pitabroodjes in de broodrooster of oven.",
+    "Leg de eieren en spinazie erop en garneer met crispy chili-olie en tahin.",
+    "Serveer meteen met de krokante pitabroodjes."
   ],
   video: "" // Optional YouTube embed link
 };

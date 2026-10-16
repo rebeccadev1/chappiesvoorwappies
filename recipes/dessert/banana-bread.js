@@ -1,30 +1,23 @@
 // recipes/dessert/banana-bread.js
 
 recipes["banana-bread"] = {
-  title: "Banana bread",
+  title: "Bananenbrood met chocola",
   image: "images/Banana bread.jpg",
   defaultServings: 10,
   time: "70 min",
   difficulty: "Easy",
   tags: ["Veggie"],
   ingredients: [
-    { amount: 4, unit: "", name: "ripe bananas" },
-    { amount: 280, unit: "g", name: "flour" },
-    { amount: 200, unit: "g", name: "sugar" },
-    { amount: 2, unit: "", name: "eggs" },
-    { amount: 120, unit: "g", name: "butter, melted" },
-    { amount: 1, unit: "tsp", name: "baking soda" },
-    { amount: 1, unit: "tsp", name: "vanilla extract" },
-    { amount: 0.5, unit: "tsp", name: "salt" }
+    { amount: 300, unit: "g", name: "bananen" },
+    { amount: 200, unit: "g", name: "bloem" },
+    { amount: 150, unit: "g", name: "suiker" },
+    { amount: 3, unit: "", name: "eieren" },
+    { amount: 150, unit: "g", name: "gesmolten boter" },
+    { amount: 1, unit: "pak", name: "bakpoeder" },
+    { amount: 1, unit: "pak", name: "speculaaskruiden" }
   ],
   steps: [
-    "Preheat oven to 175°C and grease a loaf pan.",
-    "Mash the ripe bananas in a large bowl.",
-    "Mix in the melted butter, eggs, sugar, and vanilla until combined.",
-    "Add flour, baking soda, and salt and stir until just combined.",
-    "Pour the batter into the prepared loaf pan.",
-    "Bake for about 60 minutes until golden and a toothpick comes out clean.",
-    "Let cool slightly before slicing."
+    "NOG UITWERKEN."
   ],
   video: ""
 };

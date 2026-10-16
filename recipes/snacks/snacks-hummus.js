@@ -8,19 +8,16 @@ recipes["snacks-hummus"] = {
   difficulty: "Easy",
   tags: ["Vegan", "Veggie"],
   ingredients: [
-    { amount: 400, unit: "g", name: "chickpeas" },
-    { amount: 60, unit: "g", name: "tahini" },
-    { amount: 2, unit: "", name: "garlic cloves" },
-    { amount: 3, unit: "tbsp", name: "lemon juice" },
-    { amount: 3, unit: "tbsp", name: "olive oil" },
-    { amount: 1, unit: "tsp", name: "cumin" }
+    { amount: 400, unit: "g", name: "kikkererwten" },
+    { amount: 2, unit: "el", name: "tahini" },
+    { amount: 3, unit: "el", name: "sesamolie" },
+    { amount: 1, unit: "pot", name: "zongedroogde tomaten" },
+    { amount: 1, unit: "", name: "ijsklontje" },
   ],
   steps: [
-    "Drain and rinse the chickpeas.",
-    "Blend chickpeas, tahini, garlic, and lemon juice until smooth.",
-    "Add olive oil gradually while blending to reach a creamy consistency.",
-    "Season with cumin, salt, and pepper to taste.",
-    "Serve in a bowl with a drizzle of olive oil on top."
+    "Laat de kikkererwten uitlekken.",
+    "Mix de kikkererwten, tahini, sesamolie, en zongedroogde tomaten in een blender.",
+    "Voeg het ijsklontje toe en mix tot een gladde massa.",
   ],
   video: ""
 };

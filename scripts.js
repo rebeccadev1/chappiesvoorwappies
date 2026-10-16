@@ -69,6 +69,13 @@ function openRecipe(id) {
     .map(step => `<li>${step}</li>`)
     .join("");
 
+  const notes = []
+    .concat(r.notes ?? r.Notes ?? [])
+    .filter(note => note != null && String(note).trim() !== "");
+  const notesList = notes
+    .map(note => `<li>${note}</li>`)
+    .join("");
+
   const metaChips = [];
   if (r.time) {
     metaChips.push(`<span class="badge badge-time">${r.time}</span>`);
@@ -96,6 +103,8 @@ function openRecipe(id) {
 
     <h3>Steps</h3>
     <ol class="steps">${stepsList}</ol>
+
+    ${notesList ? `<h3>Notes</h3><ul class="notes">${notesList}</ul>` : ""}
 
     ${r.video ? `<h3>Video</h3><iframe width="100%" height="315" src="${r.video}" frameborder="0" allowfullscreen></iframe>` : ""}
   `;

@@ -4,26 +4,29 @@ recipes["koreaanse-soep"] = {
   title: "Koreaanse soep",
   image: "images/Koreaanse soep.jpg",
   defaultServings: 4,
-  time: "35 min",
+  time: "30 min",
   difficulty: "Easy",
-  tags: ["Veggie", "Vegan", "Asian", "Spicy", "Soup"],
+  tags: ["Asian", "Spicy", "Soup"],
   ingredients: [
-    { amount: 1.5, unit: "l", name: "groentebouillon" },
-    { amount: 2, unit: "tbsp", name: "gochugaru" },
-    { amount: 2, unit: "tbsp", name: "gochujang" },
+
     { amount: 300, unit: "g", name: "tofu" },
-    { amount: 200, unit: "g", name: "champignons" },
+    { amount: 300, unit: "g", name: "rijstcakes" },
+    { amount: 100, unit: "g", name: "gedroogde kelp" },
     { amount: 300, unit: "g", name: "paksoi" },
-    { amount: 3, unit: "", name: "lente-ui" },
-    { amount: 4, unit: "teen", name: "knoflook" }
+    { amount: 1, unit: "", name: "lente-ui" },
+    { amount: 100, unit: "g", name: "tauge" },
+    { amount: 2, unit: "tenen", name: "knoflook" },
+    { amount: 4/5, unit: "el", name: "sojapasta" },
+    { amount: 1, unit: "el", name: "gochujang" },
+    { amount: 2, unit: "l", name: "water" },
   ],
   steps: [
-    "Breng bouillon aan de kook",
-    "Voeg gochugaru en gochujang toe",
-    "Snijd tofu in blokjes en voeg toe",
-    "Voeg champignons en knoflook toe",
-    "Voeg paksoi toe en kook 5 minuten",
-    "Garneer met lente-ui"
+    "Week de gedroogde kelp en rijstcakes in water.",
+    "Snijd de lente-ui in kleine stukjes.",
+    "Bak de tofu in een pan met de knoflook, sojapasta en gochujang.",
+    "Voeg de paksoi toe en kook 5 minuten.",
+    "Voeg de kelp en rijstcakes toe.",
+    "Garneer met de lente-ui en tauge."
   ],
   video: ""
 };

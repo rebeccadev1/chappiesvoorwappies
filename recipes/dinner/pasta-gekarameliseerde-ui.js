@@ -8,23 +8,23 @@ recipes["pasta-gekarameliseerde-ui"] = {
   difficulty: "Easy",
   tags: ["Veggie", "Italian"],
   ingredients: [
-    { amount: 400, unit: "g", name: "pasta" },
-    { amount: 5, unit: "", name: "uien" },
-    { amount: 60, unit: "g", name: "boter" },
-    { amount: 200, unit: "ml", name: "room" },
-    { amount: 2, unit: "tbsp", name: "balsamico azijn" },
-    { amount: 1, unit: "tbsp", name: "suiker" },
-    { amount: 2, unit: "tsp", name: "tijm" },
+    { amount: 500, unit: "g", name: "pasta" },
+    { amount: 6, unit: "", name: "uien" },
+    { amount: 80, unit: "g", name: "boter" },
+    { amount: 300, unit: "ml", name: "sinaasappelsap" },
+    { amount: 2, unit: "el", name: "balsamico azijn" },
+    { amount: 1, unit: "el", name: "suiker" },
+    { amount: 50, unit: "g", name: "hazelnoten" },
+    { amount: 2, unit: "tl", name: "tijm" },
     { amount: 80, unit: "g", name: "parmezaanse kaas" }
   ],
   steps: [
-    "Snijd uien in ringen",
-    "Bak uien 30 minuten op laag vuur met boter en suiker",
-    "Voeg balsamico en tijm toe",
-    "Kook pasta volgens verpakking",
-    "Voeg room toe aan uien",
-    "Meng pasta erdoor, serveer met parmezaan"
+    "Snijd uien in kwart ringen.",
+    "Bak uien 30 minuten op laag vuur met boter en suiker.",
+    "Voeg balsamico, sinaasappelsap en tijm toe.",
+    "Kook pasta volgens verpakking.",
+    "Meng pasta erdoor, serveer met parmezaan."
   ],
+  notes: "De sinaasappelsap kan worden vervangen door sinaasappelen (schil geraspt door gerecht)",
   video: ""
 };
-

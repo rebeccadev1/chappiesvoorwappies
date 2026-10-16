@@ -9,21 +9,22 @@ recipes["spitskool-misoboter-bieten-hummus"] = {
   tags: ["Veggie", "Asian"],
   ingredients: [
     { amount: 2, unit: "", name: "spitskool" },
-    { amount: 80, unit: "g", name: "boter" },
-    { amount: 3, unit: "tbsp", name: "miso pasta" },
+    { amount: 100, unit: "g", name: "boter" },
+    { amount: 3, unit: "el", name: "miso pasta" },
     { amount: 300, unit: "g", name: "gekookte rode bieten" },
-    { amount: 400, unit: "g", name: "kikkererwten" },
-    { amount: 3, unit: "tbsp", name: "tahini" },
-    { amount: 2, unit: "teen", name: "knoflook" },
-    { amount: 1, unit: "", name: "citroen" }
+    { amount: 1, unit: "blik", name: "kikkererwten" },
+    { amount: 3, unit: "el", name: "tahini" },
+    { amount: 3, unit: "el", name: "sesamolie" },
+    { amount: 1, unit: "el", name: "sesamzaad" },
   ],
   steps: [
-    "Halveer spitskolen, borstel met olie",
-    "Rooster 25 min op 200°C",
-    "Mix boter met miso tot misoboter",
-    "Mix bieten, kikkererwten, tahini, knoflook en citroen tot hummus",
-    "Smeer hummus op bord",
-    "Leg spitskool erop en verdeel misoboter"
+    "Verhit in een pan wat olie, bak kwart spitskool in de pan tot goudbruin.",
+    "Voeg een laagje water toe en stoom tot gaar (prik met vork).",
+    "Mix boter met miso tot misoboter.",
+    "Haal de pan van het vuur en schep driekwart van de misoboter over de spitskool.",
+    "Blend bieten, kikkererwten, tahini, en sesamolie tot hummus.",
+    "Leg de spitskool op de hummus.",
+    "Garneer met een klontje misoboter en sesamzaad."
   ],
   video: ""
 };

@@ -9,21 +9,21 @@ recipes["gevulde-zoete-aardappel"] = {
   tags: ["Veggie"],
   ingredients: [
     { amount: 4, unit: "", name: "zoete aardappelen" },
-    { amount: 400, unit: "g", name: "kikkererwten" },
-    { amount: 150, unit: "g", name: "feta" },
-    { amount: 200, unit: "g", name: "spinazie" },
+    { amount: 1, unit: "blik", name: "kidneybonen" },
+    { amount: 1, unit: "blik", name: "mais" },
+    { amount: 2, unit: "", name: "paprika's" },
     { amount: 1, unit: "", name: "rode ui" },
-    { amount: 2, unit: "teen", name: "knoflook" },
-    { amount: 2, unit: "tsp", name: "paprikapoeder" },
-    { amount: 150, unit: "ml", name: "yoghurt" }
+    { amount: 1, unit: "", name: "avocado" },
+    { amount: 1, unit: "pak", name: "creme fraiche" },
+    { amount: 1, unit: "zak", name: "geraspte kaas" }
   ],
   steps: [
-    "Prik zoete aardappelen in en bak 45 min op 200°C",
-    "Spoel kikkererwten en kruid met paprikapoeder",
-    "Rooster kikkererwten in oven",
-    "Bak ui, knoflook en spinazie",
-    "Snijd aardappelen open, vul met groenten en kikkererwten",
-    "Top met feta en yoghurt"
+    "Prik zoete aardappelen in en doe ze 8-12 min in de magnetron (800W).",
+    "Snijd de ui en paprika's in kleine stukjes.",
+    "Spoel kidneybonen en mais om.",
+    "Maak een prak van de avocado.",
+    "Snijd de zoete aardappelen open, vul met de groenten en bonen.",
+    "Top met avocado, creme fraiche en geraspte kaas."
   ],
   video: ""
 };

@@ -1,27 +1,26 @@
 // recipes/dessert/lemon-posset.js
 
 recipes["lemon-posset"] = {
-  title: "Lemon posset",
+  title: "Citroenposset",
   image: "images/Lemon posset.jpg",
   defaultServings: 4,
-  time: "15 min + koeltijd",
+  time: "30 min+3 uur koelen",
   difficulty: "Easy",
   tags: ["Veggie"],
   ingredients: [
-    { amount: 600, unit: "ml", name: "heavy cream" },
-    { amount: 150, unit: "g", name: "sugar" },
-    { amount: 100, unit: "ml", name: "lemon juice" },
-    { amount: 2, unit: "tsp", name: "lemon zest" }
+    { amount: 500, unit: "ml", name: "slagroom" },
+    { amount: 150, unit: "g", name: "suiker" },
+    { amount: 6, unit: "", name: "citroenen" },
+    { amount: 10, unit: "g", name: "(kokos)suiker" }
   ],
   steps: [
-    "Heat the cream and sugar in a saucepan until it just comes to a simmer.",
-    "Simmer gently for 3 minutes, stirring occasionally.",
-    "Remove from the heat and stir in the lemon juice and zest.",
-    "Let cool for about 10 minutes.",
-    "Pour into small serving glasses or ramekins.",
-    "Refrigerate for at least 3 hours until set.",
-    "Serve chilled, optionally garnished with extra zest or berries."
+    "Schrop de citroenen en rasp de schil van 2 citroenen.",
+    "Pers van 4 citroenen de sap en bewaar de schil (hier komt de posset in).",
+    "Verwarm de slagroom en suiker en laat het 10 minuten op laag vuur simmeren.",
+    "Voeg de citroensap en rasp toe en laat de posset 3 uur in de koelkast stollen.",
+    "Strooi wat (kokos)suiker op de posset en brand het kort aan."
   ],
+  notes: "Lekker met vanilleijs en munt!",
   video: ""
 };
 

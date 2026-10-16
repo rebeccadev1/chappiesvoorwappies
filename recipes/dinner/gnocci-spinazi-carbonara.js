@@ -15,16 +15,17 @@ recipes["gnocci-spinazi-carbonara"] = {
     { amount: 2, unit: "", name: "eidooiers" },
     { amount: 100, unit: "g", name: "parmezaanse kaas" },
     { amount: 2, unit: "teen", name: "knoflook" },
-    { amount: 1, unit: "tsp", name: "zwarte peper" }
+    { amount: 1, unit: "tl", name: "zwarte peper" }
   ],
   steps: [
-    "Bak pancetta krokant",
-    "Kook gnocchi volgens verpakking",
-    "Klop eieren, dooiers en parmezaan",
-    "Voeg spinazie toe aan pancetta",
-    "Meng warme gnocchi met eimengsel (van vuur)",
-    "Voeg pancetta en spinazie toe, serveer met peper"
+    "Bak pancetta krokant.",
+    "Kook gnocchi volgens verpakking.",
+    "Klop eieren, dooiers en parmezaan.",
+    "Voeg spinazie toe aan pancetta.",
+    "Meng warme gnocchi met eimengsel (van vuur).",
+    "Voeg pancetta en spinazie toe, serveer met peper."
   ],
+  notes: ["Vervang evt de gnocci met spagetti, de spinazie met bimi"],
   video: ""
 };
 

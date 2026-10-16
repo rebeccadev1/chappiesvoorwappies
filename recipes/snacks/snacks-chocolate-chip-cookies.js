@@ -1,34 +1,37 @@
 // recipes/snacks-chocolate-chip-cookies.js
 
 recipes["snacks-chocolate-chip-cookies"] = {
-  title: "Chocolate chip cookies",
+  title: "Koekjes met chocoladestukjes",
   image: "images/Chocolate chips.jpg",
-  defaultServings: 24,
-  time: "25 min",
-  difficulty: "Easy",
+  defaultServings: 15,
+  time: "2 uur",
+  difficulty: "Medium",
   tags: ["Veggie"],
   ingredients: [
-    { amount: 280, unit: "g", name: "flour" },
-    { amount: 225, unit: "g", name: "butter, softened" },
-    { amount: 200, unit: "g", name: "brown sugar" },
-    { amount: 100, unit: "g", name: "white sugar" },
-    { amount: 2, unit: "", name: "eggs" },
-    { amount: 2, unit: "tsp", name: "vanilla extract" },
-    { amount: 1, unit: "tsp", name: "baking soda" },
-    { amount: 1, unit: "tsp", name: "salt" },
-    { amount: 300, unit: "g", name: "chocolate chips" }
+    { amount: 185, unit: "g", name: "gesmolten boter" },
+    { amount: 180, unit: "g", name: "bruine basterdsuiker " },
+    { amount: 50, unit: "g", name: "witte suiker" },
+    { amount: 1, unit: "", name: "ei" },
+    { amount: 1, unit: "", name: "eidooier" },
+    { amount: 2, unit: "tl", name: "vanille-extract" },
+    { amount: 360, unit: "g", name: "bloem" },
+    { amount: 0.5, unit: "tl", name: "baksoda" },
+    { amount: 1, unit: "tl", name: "grof zeezout" },
+    { amount: 75, unit: "g", name: "pure chocolade" },
+    { amount: 75, unit: "g", name: "witte chocolade" }
   ],
   steps: [
-    "Preheat oven to 190°C.",
-    "Cream the butter with the brown and white sugars until light and fluffy.",
-    "Beat in the eggs and vanilla extract.",
-    "In a separate bowl, mix flour, baking soda, and salt.",
-    "Gradually add the dry ingredients to the butter mixture.",
-    "Fold in the chocolate chips.",
-    "Drop spoonfuls of dough onto a baking sheet lined with parchment paper.",
-    "Bake for 10–12 minutes until golden brown around the edges.",
-    "Cool on the baking sheet for 5 minutes, then transfer to a rack to cool completely."
+    "Smelt de boter en meng deze met de suiker, ei en vanille extract.",
+    "Meng de bloem, bakpoeder en zout in een aparte kom.",
+    "Voeg de droge ingrediënten toe aan de boter-suiker-ei-mix.",
+    "Hak de pure en witte chocolade in stukjes en doe de helft bij het koekjesdeeg.",
+    "Bewaar het deeg 1-2 uur in de koelkast.",
+    "Verdeel de koekjes op een bakplaat met bakpapier.",
+    "Leg de rest van de stukjes chocolade op de koekjes en druk erop.",
+    "Bak ze in de oven op 180°C voor 10–12 minuten.",
+    "Laat de koekjes 5 minuten afkoelen op een bord en besprenkel evt met grof zeezout."
   ],
+  notes: "Bewaar de individuele deegballetjes evt in de vriezer voor een snelle snack",
   video: ""
 };
 

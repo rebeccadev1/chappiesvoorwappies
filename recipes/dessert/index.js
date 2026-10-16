@@ -3,11 +3,13 @@
 
 window.dessertRecipes = [
   'banana-bread',
-  'pistache-beschuittaart',
+  'beschuittaart',
+  'swiss-buttercream',
   'appel-peer-plaattaart',
   'gestoofde-peertjes',
   'lemon-posset',
-  'spiced-chai-worteltaart'
+  'spiced-chai-worteltaart',
+  'kruidnoot-tiramisu'
 ];
 
 // Dynamically load all recipe scripts

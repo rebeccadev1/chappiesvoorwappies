@@ -14,15 +14,16 @@ recipes["caramelized-onion-hazelnut-soup"] = {
     { amount: 3, unit: "el", name: "olijfolie" },
     { amount: 30, unit: "g", name: "boter" },
     { amount: 2, unit: "takjes", name: "tijm" },
-    {unit: "naar smaak", name: "zout en peper" }
+    { amount: 1, unit: "naar smaak", name: "zout en peper" },
+    { amount:"1", unit: "", name: "baguette (evt)" }
   ],
   steps: [
     "Snipper de uien en fruit ze langzaam in olijfolie en boter tot ze diep goudbruin en gekarameliseerd zijn (ongeveer 30 minuten op laag vuur).",
     "Rooster de hazelnoten in een droge pan tot ze geuren en licht kleuren, laat iets afkoelen en hak grof.",
     "Voeg de groentebouillon bij de gekarameliseerde uien en laat 15 minuten zachtjes sudderen.",
-    "Pureer de soep met een staafmixer tot hij mooi glad is.",
+    "Pureer de soep met een staafmixer.",
     "Roer de helft van de gehakte hazelnoten erdoor en breng op smaak met tijm, zout en peper.",
-    "Serveer de soep in kommen en garneer met de rest van de hazelnoten en eventueel extra tijm."
+    "Serveer de soep in kommen en garneer met de rest van de hazelnoten, eventueel extra tijm en/of baguette."
   ],
   video: ""
 };

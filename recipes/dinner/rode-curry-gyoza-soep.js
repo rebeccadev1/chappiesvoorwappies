@@ -6,25 +6,24 @@ recipes["rode-curry-gyoza-soep"] = {
   defaultServings: 4,
   time: "30 min",
   difficulty: "Easy",
-  tags: ["Asian", "Soup", "Spicy"],
+  tags: ["Asian", "Soup", "Spicy", "Vega"],
   ingredients: [
-    { amount: 20, unit: "", name: "gyoza" },
-    { amount: 3, unit: "tbsp", name: "rode currypasta" },
+    { amount: 12, unit: "", name: "gyoza" },
+    { amount: 3, unit: "el", name: "rode currypasta" },
     { amount: 400, unit: "ml", name: "kokosmelk" },
     { amount: 500, unit: "ml", name: "groentebouillon" },
-    { amount: 1, unit: "", name: "paprika" },
-    { amount: 200, unit: "g", name: "champignons" },
-    { amount: 2, unit: "tbsp", name: "vissaus" },
-    { amount: 1, unit: "", name: "limoen" }
+    { amount: 0.5, unit: "", name: "limoen" },
+    { amount: 4, unit: "porties", name: "udonnoodles" },
+    { amount: 1, unit: "", name: "lenteui" },
   ],
   steps: [
-    "Bak currypasta in olie",
-    "Voeg kokosmelk en bouillon toe",
-    "Snijd groenten en voeg toe",
-    "Voeg vissaus toe en breng op smaak",
-    "Voeg gyoza toe en kook 8 minuten",
-    "Serveer met limoensap"
+    "Bak currypasta in olie.",
+    "Voeg kokosmelk en bouillon toe.",
+    "Kook de udonnoodles volgens verpakking.",
+    "Voeg gyoza toe en kook tot gaar.",
+    "Serveer met limoensap en lenteui."
   ],
+  notes: "Kroepoek is ook altijd goed hier",
   video: ""
 };
 

@@ -375,6 +375,9 @@ body.modal-open { overflow: hidden; }
 /* Lists spacing inside detail */
 .ingredients { margin-top: 1em; }
 .steps { margin-top: 1.5em; }
+.notes {
+  margin-top: 0.5em;
+}
 
 /* --- Search: no results message --- */
 .no-results {

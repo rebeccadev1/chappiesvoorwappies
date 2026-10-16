@@ -23,7 +23,10 @@ window.dinnerRecipes = [
   'shakshuka',
   'watermeloen-steak-thee-rijst-bimi',
   'spitskool-misoboter-bieten-hummus',
-  'gnocci-spinazi-carbonara'
+  'gnocci-spinazi-carbonara',
+  'verse-pasta',
+  'tart-tarte-tin',
+  'dahl'
 ];
 
 // Dynamically load all recipe scripts

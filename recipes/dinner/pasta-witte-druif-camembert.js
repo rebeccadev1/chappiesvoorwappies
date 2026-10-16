@@ -8,22 +8,18 @@ recipes["pasta-witte-druif-camembert"] = {
   difficulty: "Easy",
   tags: ["Veggie", "Italian"],
   ingredients: [
-    { amount: 400, unit: "g", name: "pasta" },
-    { amount: 300, unit: "g", name: "witte druiven" },
+    { amount: 500, unit: "g", name: "pasta" },
+    { amount: 500, unit: "g", name: "witte druiven" },
     { amount: 250, unit: "g", name: "camembert" },
-    { amount: 150, unit: "g", name: "spinazie" },
-    { amount: 150, unit: "ml", name: "room" },
     { amount: 60, unit: "g", name: "walnoten" },
-    { amount: 2, unit: "tsp", name: "tijm" },
-    { amount: 1, unit: "tbsp", name: "honing" }
+    { amount: 2, unit: "tl", name: "tijm" },
+    { amount: 1, unit: "el", name: "honing" }
   ],
   steps: [
-    "Kook pasta volgens verpakking",
-    "Halveer druiven",
-    "Bak druiven met honing en tijm",
-    "Voeg room en camembert toe, laat smelten",
-    "Meng spinazie en pasta erdoor",
-    "Garneer met geroosterde walnoten"
+    "Halveer druiven, leg op een bakplaat met de camembert.",
+    "Bak 20 minuten op 180°C.",
+    "Kook de pasta ondertussen.",
+    "Meng pasta en druiven met de walnoten en tijm.",
   ],
   video: ""
 };
